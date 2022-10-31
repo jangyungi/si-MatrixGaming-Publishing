@@ -12,7 +12,7 @@ export const LaptopHeader = () => {
       <div css={st.inner}>
         <a href="#" css={st.logoWrapper}>
           <div css={st.logo}>
-            <Image src={Logo} alt={"logo"} />
+            <Image fill src={Logo} alt={"logo"} />
           </div>
           <Typography fontWeight={700} color={Color.TextMain}>
             {"MATRIX GAMING"}
@@ -68,6 +68,7 @@ const st = {
     gap: 24px;
   `,
   logo: css`
+    position: relative;
     width: 40px;
     aspect-ratio: 1;
   `,
