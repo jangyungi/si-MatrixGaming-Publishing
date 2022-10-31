@@ -1,9 +1,11 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { useMemo, useState } from "react";
+import { lightPalette } from "./Colors";
 import { ScreenType } from "./Liimt";
 import { lightTypographyOptions } from "./Typography";
 
 export const lightTheme = createTheme({
+  palette: lightPalette,
   typography: lightTypographyOptions,
   breakpoints: {
     values: {
