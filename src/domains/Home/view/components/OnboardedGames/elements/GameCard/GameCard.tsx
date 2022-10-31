@@ -3,22 +3,25 @@ import Image from "next/image";
 import { CardType } from "@/domains/Home/view/components/OnboardedGames/models/card.type";
 import { Typography } from "@mui/material";
 import { Color } from "@/common/themes/Colors";
+import Link from "next/link";
 
 export const GameCard = (props: CardType) => {
   return (
-    <div css={st.container}>
-      <div css={st.image}>
-        <Image fill src={props.src} alt="card-img" />
+    <Link href={"/"}>
+      <div css={st.container}>
+        <div css={st.image}>
+          <Image fill src={props.src} alt="card-img" />
+        </div>
+        <div css={st.wrapper}>
+          <Typography fontWeight={500} color={Color.TextMain} mb={"16px"}>
+            {props.title}
+          </Typography>
+          <Typography fontWeight={300} color={Color.TextMain}>
+            {props.desc}
+          </Typography>
+        </div>
       </div>
-      <div css={st.wrapper}>
-        <Typography fontWeight={500} color={Color.TextMain} mb={"16px"}>
-          {props.title}
-        </Typography>
-        <Typography fontWeight={300} color={Color.TextMain}>
-          {props.desc}
-        </Typography>
-      </div>
-    </div>
+    </Link>
   );
 };
 
