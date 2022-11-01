@@ -12,7 +12,7 @@ export const HomeSwiper = () => {
 const st = {
   root: css`
     width: 100%;
-    margin-top: 80px;
+    margin-top: 176px;
     margin-bottom: 320px;
   `,
 };
