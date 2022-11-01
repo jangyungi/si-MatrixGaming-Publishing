@@ -39,3 +39,23 @@ a {
   width: 100%;
   height: 100%;
 }
+
+.swiper-slide-prev .swiper-image-background {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/0.416;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.9;
+}
+
+.swiper-slide-next .swiper-image-background {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/0.416;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.9;
+}
