@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Typography } from "@mui/material";
 import { Color } from "@/common/themes/Colors";
 import Link from "next/link";
+import { MediaQueries } from "@/common/themes/Limit";
 
 export const CardNews = (props: CardNewsType) => {
   return (
@@ -12,7 +13,7 @@ export const CardNews = (props: CardNewsType) => {
         <div css={st.imgWrapper}>
           <Image fill src={props.src} alt="card" />
           <div css={st.opacity}></div>
-          <Typography color={Color.TextMain} css={st.text}>
+          <Typography variant="body1" color={Color.TextMain} css={st.text}>
             {props.text}
           </Typography>
         </div>

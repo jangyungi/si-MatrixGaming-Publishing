@@ -1,4 +1,4 @@
-import { MediaQueries } from "@/common/themes/Liimt";
+import { MediaQueries } from "@/common/themes/Limit";
 import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
 import { TitleSection } from "@/domains/Home/common/components/TitleSection";
 import { css } from "@emotion/react";
@@ -34,11 +34,11 @@ const st = {
     column-gap: 3%;
     row-gap: 3%;
 
-    @media ${MediaQueries.md} {
+    @media ${MediaQueries.lg} {
       grid-template-columns: 1fr 1fr;
     }
 
-    @media ${MediaQueries.sm} {
+    @media ${MediaQueries.md} {
       grid-template-columns: 1fr;
     }
   `,
