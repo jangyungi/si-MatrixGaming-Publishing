@@ -1,12 +1,11 @@
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import { useMemo, useState } from "react";
 import { lightPalette } from "./Colors";
-import { ScreenType } from "./Liimt";
-import { lightTypographyOptions } from "./Typography";
+import { ScreenType } from "./Limit";
+import { typographyOptions } from "./Typography";
 
 export const lightTheme = createTheme({
   palette: lightPalette,
-  typography: lightTypographyOptions,
   breakpoints: {
     values: {
       xs: 0,
@@ -16,6 +15,7 @@ export const lightTheme = createTheme({
       xl: ScreenType.xl + 1,
     },
   },
+  typography: typographyOptions,
   components: {
     MuiButton: {
       defaultProps: {
@@ -38,7 +38,7 @@ export enum ThemeTypes {
 export const findTheme = (theme: ThemeTypes) => {
   switch (theme) {
     default:
-      return responsiveFontSizes(lightTheme);
+      return lightTheme;
   }
 };
 

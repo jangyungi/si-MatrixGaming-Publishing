@@ -16,6 +16,15 @@ export const MediaQueries = {
   xxl: `(max-width:${ScreenType.xxl}px)`,
 };
 
+export const TypographyMediaQueries = {
+  xs: `@media (max-width:${ScreenType.xs}px)`,
+  sm: `@media (max-width:${ScreenType.sm}px)`,
+  md: `@media (max-width:${ScreenType.md}px)`,
+  lg: `@media (max-width:${ScreenType.lg}px)`,
+  xl: `@media (max-width:${ScreenType.xl}px)`,
+  xxl: `@media (max-width:${ScreenType.xxl}px)`,
+};
+
 export enum Dimension {
   SectionWidth = "66.667vw",
   ViewPortMaxWidth = "1921px",

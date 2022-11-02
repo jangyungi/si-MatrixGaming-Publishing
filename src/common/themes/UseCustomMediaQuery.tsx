@@ -1,5 +1,5 @@
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { MediaQueries } from "./Liimt";
+import { MediaQueries } from "./Limit";
 
 export const useCustomMediaQuery = () => {
   const isExtraSmall = useMediaQuery(MediaQueries.xs);
