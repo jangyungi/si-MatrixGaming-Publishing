@@ -24,6 +24,7 @@ const st = {
     max-width: 1200px;
     padding: ${isMedium ? "0 16px" : "0 24px"};
     margin: 0 auto;
+    padding-bottom: 200px;
   `,
 
   container: (isMedium: boolean) => css`
