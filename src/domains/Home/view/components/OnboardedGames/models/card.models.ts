@@ -10,23 +10,23 @@ export const CardItems: CardType[] = [
   {
     src: Card1,
     title: "Toy knight",
-    desc: `“ Claim your throne back and save your kingdom before it’s too late! “`,
+    desc: `"Become a King and save the kingdom from an obscure conspiracy"`,
   },
   {
     src: Card2,
     title: "Project R2",
-    desc: `“ Change the doomed fate of Kumo “`,
+    desc: `"When all hope is lost, only a hero can change destiny"`,
   },
-  { src: Card3, title: "Soul Hunter", desc: `“ Dive into the underworld “` },
-  { src: Card4, title: "Rafael", desc: `“ Destroy your own creations “` },
+  { src: Card3, title: "Soul Hunter", desc: `“ Dive into the underworld “ ` },
+  { src: Card4, title: "Rafael", desc: `"When playing God goes wrong..."` },
   {
     src: Card5,
     title: "Bunker-53",
-    desc: `“ Survive the most dangerous island on the planet “`,
+    desc: `"The most dangerous island on the planet is waiting for your guts... Literally"`,
   },
   {
     src: Card6,
     title: "Avery",
-    desc: `“ Meet Avery, the most glutton mouse on Earth…yet “`,
+    desc: `"The tale of a young mouse destined for heroics"`,
   },
 ];
