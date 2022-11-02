@@ -114,7 +114,10 @@ const baseTypographyOptions: TypographyOptions = {
       fontSize: "32px",
     },
     [TypographyMediaQueries.sm]: {
-      fontSize: "28px",
+      fontSize: "22px",
+    },
+    [TypographyMediaQueries.xs]: {
+      fontSize: "16px",
     },
   },
 };

@@ -13,17 +13,23 @@ export const Banner = () => {
   return (
     <div css={st.root}>
       <div css={st.image}>
-        <Image fill src={BannerItem.src} alt="img" />
+        <Image
+          fill
+          src={BannerItem.src}
+          alt="img"
+          style={{ objectFit: "cover", maxHeight: 600 }}
+        />
         <div css={st.opacity}></div>
         <div css={st.textContainer}>
           <Typography variant="caption" color="secondary" mb={0.4}>
             {BannerItem.caption}
           </Typography>
           <Typography
+            variant="h1"
             color="secondary"
             fontSize={"40px"}
             fontWeight={700}
-            lineHeight={1.4}
+            lineHeight={1.2}
           >
             {BannerItem.title}
           </Typography>
@@ -41,7 +47,10 @@ const st = {
   image: css`
     position: relative;
     width: 100%;
-    aspect-ratio: 1/0.31;
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
   `,
 
   textContainer: css`

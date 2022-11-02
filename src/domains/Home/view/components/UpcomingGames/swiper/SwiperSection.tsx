@@ -5,11 +5,7 @@ import SwiperCore from "swiper";
 import { Autoplay, EffectCoverflow } from "swiper";
 import Image from "next/image";
 import { useState } from "react";
-import { Button, Typography } from "@mui/material";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
-import { MediaQueries } from "@/common/themes/Limit";
+import { Typography } from "@mui/material";
 import { UpcomingSlideItems } from "./models/upcoming.model";
 
 export const SwiperSection = () => {

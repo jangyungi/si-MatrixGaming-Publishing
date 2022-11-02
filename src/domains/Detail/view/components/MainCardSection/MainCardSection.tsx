@@ -5,9 +5,11 @@ import { Typography, TypographyProps } from "@mui/material";
 import { Color } from "@/common/themes/Colors";
 import { MediaQueries } from "@/common/themes/Limit";
 import { CardItems } from "@/domains/Detail/common/model/card.model";
+import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
 
 export const MainCardSection = () => {
   const { main } = CardItems;
+  const { isMedium } = useCustomMediaQuery();
   return (
     <div css={st.root}>
       <div css={st.imageBox}>
@@ -30,7 +32,13 @@ export const MainCardSection = () => {
         </div>
       </div>
       <div css={st.contentBox}>
-        <Typography color="secondary" fontSize={"24px"} lineHeight={"40px"}>
+        <Typography
+          variant="h2"
+          color="secondary"
+          fontWeight={400}
+          fontSize={"24px"}
+          lineHeight={isMedium ? 1.4 : "40px"}
+        >
           {main.desc}
         </Typography>
       </div>
@@ -100,5 +108,7 @@ const st = {
 };
 
 const Text = (p: TypographyProps) => {
-  return <Typography lineHeight={1} color="secondary" {...p} />;
+  return (
+    <Typography variant="caption" lineHeight={1} color="secondary" {...p} />
+  );
 };

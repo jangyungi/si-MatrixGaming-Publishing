@@ -11,8 +11,12 @@ export const CardSection = () => {
       {contents.map((it, index) => (
         <div css={st.container} key={index}>
           <div css={st.wrapper}>
-            <Typography color="secondary">{it.title}</Typography>
-            <Typography color="primary">{it.desc}</Typography>
+            <Typography variant="subtitle2" color="secondary" lineHeight={1}>
+              {it.title}
+            </Typography>
+            <Typography variant="h2" fontWeight={40} color="primary">
+              {it.desc}
+            </Typography>
           </div>
           <div css={st.image}>
             <Image fill src={it.src} alt="img" />
@@ -43,15 +47,20 @@ const st = {
     justify-content: space-between;
     align-items: center;
 
-    &:nth-child(even) {
+    &:nth-of-type(even) {
       flex-direction: row-reverse;
     }
 
     @media ${MediaQueries.md} {
       flex-direction: column;
+      gap: 40px;
       &:nth-child(even) {
         flex-direction: column;
       }
+    }
+
+    @media ${MediaQueries.sm} {
+      gap: 20px;
     }
   `,
   wrapper: css`
@@ -62,6 +71,11 @@ const st = {
 
     @media ${MediaQueries.md} {
       width: 100%;
+      gap: 40px;
+    }
+
+    @media ${MediaQueries.sm} {
+      gap: 20px;
     }
   `,
   image: css`
