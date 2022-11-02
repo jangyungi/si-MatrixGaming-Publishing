@@ -14,7 +14,7 @@ export const LaptopHeader = () => {
           <div css={st.logo}>
             <Image fill src={Logo} alt={"logo"} />
           </div>
-          <Typography fontWeight={700} color={Color.TextMain}>
+          <Typography variant={"h2"} fontWeight={700} color={Color.TextMain}>
             {"MATRIX GAMING"}
           </Typography>
         </a>
@@ -24,7 +24,9 @@ export const LaptopHeader = () => {
             {menu.map(({ label, href }) => (
               <li key={label}>
                 <Link href={href}>
-                  <Typography color={Color.TextMain}>{label}</Typography>
+                  <Typography variant={"caption"} color={Color.TextMain}>
+                    {label}
+                  </Typography>
                 </Link>
               </li>
             ))}
