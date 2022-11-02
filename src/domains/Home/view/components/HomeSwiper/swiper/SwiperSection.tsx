@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SwiperCore from "swiper";
+import SwiperCore, { Pagination } from "swiper";
 import SwiperItem1 from "@/assets/home/swiper/swiper-item-1.svg";
 import { Autoplay, EffectCoverflow } from "swiper";
 import Image from "next/image";
@@ -10,7 +10,8 @@ import { Button } from "@mui/material";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
-import { MediaQueries } from "@/common/themes/Liimt";
+import { MediaQueries } from "@/common/themes/Limit";
+import { Color } from "@/common/themes/Colors";
 
 export const SwiperSection = () => {
   const SwiperItems = [
@@ -30,12 +31,11 @@ export const SwiperSection = () => {
   return (
     <div css={st.root}>
       <Swiper
-        spaceBetween={50}
-        slidesPerView={1.5}
+        spaceBetween={0}
+        slidesPerView={1}
         initialSlide={1}
         centeredSlides={true}
         loop={true}
-        onSlideChange={(e) => console.log(e)}
         effect={"coverflow"}
         coverflowEffect={{
           rotate: 0,
@@ -44,6 +44,12 @@ export const SwiperSection = () => {
         }}
         modules={[EffectCoverflow, Autoplay]}
         onSwiper={(swiper) => setSwiper(swiper)}
+        breakpoints={{
+          768: {
+            spaceBetween: 50,
+            slidesPerView: 1.5,
+          },
+        }}
       >
         {SwiperItems.map((it, index) => (
           <SwiperSlide key={index}>
@@ -57,12 +63,12 @@ export const SwiperSection = () => {
       <div css={st.btnContainer}>
         <Button onClick={slidePrev} color="secondary" css={st.btnWrapper}>
           <div css={st.btn}>
-            <ChevronLeftIcon />
+            <ChevronLeftIcon color={isMedium ? "primary" : "secondary"} />
           </div>
         </Button>
         <Button onClick={slideNext} color="secondary" css={st.btnWrapper}>
           <div css={st.btn}>
-            <ChevronRightIcon />
+            <ChevronRightIcon color={isMedium ? "primary" : "secondary"} />
           </div>
         </Button>
       </div>
@@ -93,15 +99,7 @@ const st = {
     justify-content: space-between;
 
     @media ${MediaQueries.md} {
-      width: 77.7%;
-    }
-
-    @media ${MediaQueries.sm} {
-      width: 80%;
-    }
-
-    @media ${MediaQueries.xs} {
-      width: 86%;
+      width: 94%;
     }
   `,
   btnWrapper: css`
@@ -121,5 +119,9 @@ const st = {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 10px #000000;
+
+    @media ${MediaQueries.md} {
+      background-color: ${Color.TextMain};
+    }
   `,
 };
