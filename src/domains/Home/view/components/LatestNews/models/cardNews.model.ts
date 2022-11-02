@@ -1,6 +1,6 @@
 import { CardNewsType } from "./cardNews.type";
-import CardNews1 from "@/assets/home/upcoming/card-news-1.svg";
-import CardNews2 from "@/assets/home/upcoming/card-news-2.svg";
+import CardNews1 from "@/assets/home/latest/card-news-1.svg";
+import CardNews2 from "@/assets/home/latest/card-news-2.svg";
 
 export const CardNewsItems: CardNewsType[] = [
   {
