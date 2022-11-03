@@ -1,3 +1,4 @@
+import { MediaQueries } from "@/common/themes/Limit";
 import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
 import { TitleSection } from "@/domains/Home/common/components/TitleSection";
 import { css } from "@emotion/react";
@@ -25,6 +26,14 @@ const st = {
     padding: ${isMedium ? "0 16px" : "0 24px"};
     margin: 0 auto;
     padding-bottom: 200px;
+
+    @media ${MediaQueries.md} {
+      padding-bottom: 400px;
+    }
+
+    @media ${MediaQueries.sm} {
+      padding-bottom: 200px;
+    }
   `,
 
   container: (isMedium: boolean) => css`
