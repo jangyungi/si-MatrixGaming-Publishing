@@ -10,8 +10,10 @@ import { UpcomingSlideItems } from "./models/upcoming.model";
 import { MediaQueries } from "@/common/themes/Limit";
 import { Color } from "@/common/themes/Colors";
 import { SwiperTitleSection } from "./swiperTitle";
+import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
 
 export const SwiperSection = () => {
+  const { isLarge } = useCustomMediaQuery();
   const [swiper, setSwiper] = useState<SwiperCore>();
   const slideNext = () => swiper?.slideNext();
   const slidePrev = () => swiper?.slidePrev();
@@ -28,18 +30,13 @@ export const SwiperSection = () => {
       <div css={st.container}>
         <Swiper
           spaceBetween={30}
-          slidesPerView={1.5}
+          slidesPerView={isLarge ? 1.5 : 4}
           initialSlide={1}
           centeredSlides={true}
           loop={true}
           onSlideChange={(e) => console.log(e)}
           modules={[EffectCoverflow, Autoplay]}
           onSwiper={(swiper) => setSwiper(swiper)}
-          breakpoints={{
-            1024: {
-              slidesPerView: 4,
-            },
-          }}
         >
           {UpcomingSlideItems.map((it, index) => (
             <SwiperSlide key={index}>

@@ -32,8 +32,8 @@ export const SwiperSection = () => {
   return (
     <div css={st.root}>
       <Swiper
-        spaceBetween={0}
-        slidesPerView={1}
+        spaceBetween={isMedium ? 0 : 50}
+        slidesPerView={isMedium ? 1 : 1.5}
         initialSlide={1}
         centeredSlides={true}
         pagination={{ clickable: true }}
@@ -46,12 +46,6 @@ export const SwiperSection = () => {
         }}
         modules={[EffectCoverflow, Autoplay, Pagination]}
         onSwiper={(swiper) => setSwiper(swiper)}
-        breakpoints={{
-          768: {
-            spaceBetween: 50,
-            slidesPerView: 1.5,
-          },
-        }}
       >
         {SwiperItems.map((it, index) => (
           <SwiperSlide key={index}>
