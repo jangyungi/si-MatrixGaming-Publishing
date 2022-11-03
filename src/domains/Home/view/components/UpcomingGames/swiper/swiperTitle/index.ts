@@ -1,0 +1,1 @@
+export { SwiperTitleSection } from "./SwiperTitleSection";
