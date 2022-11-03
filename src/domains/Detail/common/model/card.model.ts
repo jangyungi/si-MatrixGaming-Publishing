@@ -7,7 +7,7 @@ import Toy4 from "@/assets/detail/game/toy/toy-4.svg";
 export const CardItems: CardType = {
   main: {
     src: Toy1,
-    desc: `As the King of Rivellon, your authority and charisma had no equals. Your reign has brought peace and prosperity to your realm, making it seem as if nothing could ever go wrong... until that terrible day.\n\nThe court Sorceress has betrayed you by turning you to the size of a child, greatly damaging your credibility as a powerful ruler.\n\nA cunning conspiracy is taking place as your quest to the throne begins, with the help of your faithful companions.`,
+    desc: `As the King of Rivellon, your authority and charisma had no equals. Your reign has brought peace and prosperity to your realm, making it seem as if nothing could ever go wrong... until that terrible day. \n\nThe court Sorceress has betrayed you by turning you to the size of a child, greatly damaging your credibility as a powerful ruler.\n\nA cunning conspiracy is taking place as your quest to the throne begins, with the help of your faithful companions.`,
     info: {
       developer: "Matrix Gaming Inc.",
       genre: "Actions / Adventures",
