@@ -53,7 +53,7 @@ const st = {
   wrapper: css`
     width: 100%;
     aspect-ratio: 1/0.5;
-    background-color: ${Color.Primary};
+    background-color: ${Color.Background};
     padding: 7% 7% 0 7%;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;

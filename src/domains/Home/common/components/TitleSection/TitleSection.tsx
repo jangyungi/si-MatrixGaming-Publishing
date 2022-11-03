@@ -23,7 +23,6 @@ export const TitleSection = (props: TitleSectionProps) => {
       <Button
         onClick={props.onClick}
         variant="contained"
-        color="primary"
         sx={{ borderRadius: "100px" }}
         css={st.button}
       >
@@ -58,6 +57,7 @@ const st = {
   `,
 
   button: css`
+    background-color: ${Color.Background};
     @media ${MediaQueries.md} {
       display: none;
     }
