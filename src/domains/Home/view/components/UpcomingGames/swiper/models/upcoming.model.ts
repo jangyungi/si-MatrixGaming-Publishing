@@ -2,19 +2,21 @@ import { UpcomingSlideType } from "./upcaoming.type";
 import SwiperItem1 from "@/assets/home/upcoming/swiper-item-1.svg";
 import SwiperItem2 from "@/assets/home/upcoming/swiper-item-2.svg";
 import SwiperItem3 from "@/assets/home/upcoming/swiper-item-3.svg";
-import SwiperItemEmpty from "@/assets/home/upcoming/swiper-item-empty.svg";
+import SwiperItem4 from "@/assets/home/upcoming/swiper-item-4.svg";
+import SwiperItem5 from "@/assets/home/upcoming/swiper-item-5.svg";
+import SwiperItem6 from "@/assets/home/upcoming/swiper-item-6.svg";
 
 export const UpcomingSlideItems: UpcomingSlideType[] = [
   {
-    src: SwiperItemEmpty,
+    src: SwiperItem5,
     title: "Coming Soon",
   },
   {
-    src: SwiperItemEmpty,
+    src: SwiperItem6,
     title: "Coming Soon",
   },
   {
-    src: SwiperItemEmpty,
+    src: SwiperItem4,
     title: "Coming Soon",
   },
   {
