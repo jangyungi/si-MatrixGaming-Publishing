@@ -5,12 +5,9 @@ import SwiperCore from "swiper";
 import { Autoplay, EffectCoverflow } from "swiper";
 import Image from "next/image";
 import { useState } from "react";
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { UpcomingSlideItems } from "./models/upcoming.model";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { MediaQueries } from "@/common/themes/Limit";
-import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
 import { Color } from "@/common/themes/Colors";
 import { SwiperTitleSection } from "./swiperTitle";
 
@@ -18,7 +15,6 @@ export const SwiperSection = () => {
   const [swiper, setSwiper] = useState<SwiperCore>();
   const slideNext = () => swiper?.slideNext();
   const slidePrev = () => swiper?.slidePrev();
-  const { isMedium } = useCustomMediaQuery();
 
   return (
     <div css={st.root}>

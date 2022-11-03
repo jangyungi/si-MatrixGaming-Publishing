@@ -62,10 +62,10 @@ const st = {
     }
 
     @media ${MediaQueries.md} {
-      flex-direction: column;
+      flex-direction: column-reverse;
       gap: 40px;
       &:nth-of-type(even) {
-        flex-direction: column;
+        flex-direction: column-reverse;
       }
     }
 
