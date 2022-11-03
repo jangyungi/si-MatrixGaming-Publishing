@@ -10,14 +10,14 @@ export const LaptopHeader = () => {
   return (
     <div css={st.root}>
       <div css={st.inner}>
-        <a href="/" css={st.logoWrapper}>
+        <Link href="/" css={st.logoWrapper}>
           <div css={st.image}>
             <Image fill src={Logo} alt={"logo"} />
           </div>
           <Typography variant={"h2"} fontWeight={700} color={Color.TextMain}>
             {"MATRIX GAMING"}
           </Typography>
-        </a>
+        </Link>
 
         <nav css={st.menuContainer}>
           <ul css={st.menu}>

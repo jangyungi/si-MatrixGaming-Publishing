@@ -5,19 +5,20 @@ import { Color } from "@/common/themes/Colors";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import { MediaQueries } from "@/common/themes/Limit";
+import Link from "next/link";
 
 export const MobileHeader = () => {
   return (
     <div css={st.root}>
       <div css={st.inner}>
-        <a href="/" css={st.logoWrapper}>
+        <Link href="/" css={st.logoWrapper}>
           <div css={st.image}>
             <Image fill src={Logo} alt={"logo"} />
           </div>
           <Typography variant={"h2"} fontWeight={700} color={Color.TextMain}>
             {"MATRIX GAMING"}
           </Typography>
-        </a>
+        </Link>
         <IconButton>
           <MenuIcon color="secondary" css={st.menuIcon} />
         </IconButton>
