@@ -4,7 +4,7 @@ type MenuModel = {
 };
 
 export const menu: MenuModel[] = [
-  { label: "Home", href: "/home" },
-  { label: "Detail", href: "/detail" },
-  { label: "About", href: "/about" },
+  { label: "Home", href: "/" },
+  { label: "Detail", href: "/detail/toyNight" },
+  { label: "About", href: "/" },
 ];
