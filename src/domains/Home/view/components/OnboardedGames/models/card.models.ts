@@ -1,31 +1,47 @@
 import { CardType } from "./card.type";
-import Card1 from "@/assets/home/onboard/card1.svg";
-import Card2 from "@/assets/home/onboard/card2.svg";
-import Card3 from "@/assets/home/onboard/card3.svg";
-import Card4 from "@/assets/home/onboard/card4.svg";
-import Card5 from "@/assets/home/onboard/card5.svg";
-import Card6 from "@/assets/home/onboard/card6.svg";
+import ToyKnight from "@/assets/home/onboard/card1.svg";
+import ProjectR2 from "@/assets/home/onboard/card2.svg";
+import SoulHunter from "@/assets/home/onboard/card3.svg";
+import Rafael from "@/assets/home/onboard/card4.svg";
+import Bunker from "@/assets/home/onboard/card5.svg";
+import Avery from "@/assets/home/onboard/card6.svg";
 
 export const CardItems: CardType[] = [
   {
-    src: Card1,
+    name: "toyKnight",
+    src: ToyKnight,
     title: "Toy knight",
     desc: `"Become a King and save the kingdom from an obscure conspiracy"`,
   },
+
   {
-    src: Card2,
-    title: "Project R2",
-    desc: `"When all hope is lost, only a hero can change destiny"`,
+    name: "soulHunter",
+    src: SoulHunter,
+    title: "Soul Hunter",
+    desc: `“ Dive into the underworld “ `,
   },
-  { src: Card3, title: "Soul Hunter", desc: `“ Dive into the underworld “ ` },
-  { src: Card4, title: "Rafael", desc: `"When playing God goes wrong..."` },
+
   {
-    src: Card5,
+    name: "raphael",
+    src: Rafael,
+    title: "Rafael",
+    desc: `"When playing God goes wrong..."`,
+  },
+  {
+    name: "bunker",
+    src: Bunker,
     title: "Bunker-53",
     desc: `"The most dangerous island on the planet is waiting for your guts... Literally"`,
   },
   {
-    src: Card6,
+    name: "projectR2",
+    src: ProjectR2,
+    title: "Project R2",
+    desc: `"When all hope is lost, only a hero can change destiny"`,
+  },
+  {
+    name: "avery",
+    src: Avery,
     title: "Avery",
     desc: `"The tale of a young mouse destined for heroics"`,
   },
