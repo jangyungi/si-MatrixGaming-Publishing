@@ -1,9 +1,8 @@
 import { css } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SwiperCore, { Pagination } from "swiper";
 import SwiperItem1 from "@/assets/home/swiper/swiper-item-1.svg";
-import { Autoplay, EffectCoverflow } from "swiper";
+import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@mui/material";
@@ -12,6 +11,8 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
 import { MediaQueries } from "@/common/themes/Limit";
 import { Color } from "@/common/themes/Colors";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export const SwiperSection = () => {
   const SwiperItems = [
@@ -35,6 +36,7 @@ export const SwiperSection = () => {
         slidesPerView={1}
         initialSlide={1}
         centeredSlides={true}
+        pagination={{ clickable: true }}
         loop={true}
         effect={"coverflow"}
         coverflowEffect={{
@@ -42,7 +44,7 @@ export const SwiperSection = () => {
           slideShadows: false,
           scale: 0.8,
         }}
-        modules={[EffectCoverflow, Autoplay]}
+        modules={[EffectCoverflow, Autoplay, Pagination]}
         onSwiper={(swiper) => setSwiper(swiper)}
         breakpoints={{
           768: {
