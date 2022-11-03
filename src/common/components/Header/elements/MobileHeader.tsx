@@ -10,7 +10,7 @@ export const MobileHeader = () => {
   return (
     <div css={st.root}>
       <div css={st.inner}>
-        <a href="#" css={st.logoWrapper}>
+        <a href="/" css={st.logoWrapper}>
           <div css={st.image}>
             <Image fill src={Logo} alt={"logo"} />
           </div>
