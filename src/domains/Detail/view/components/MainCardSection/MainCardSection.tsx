@@ -37,6 +37,7 @@ export const MainCardSection = () => {
           fontWeight={400}
           fontSize={"24px"}
           lineHeight={isMedium ? 1.4 : "40px"}
+          sx={{ whiteSpace: "pre-wrap" }}
         >
           {main.desc}
         </Typography>
@@ -87,6 +88,7 @@ const st = {
     @media ${MediaQueries.md} {
       width: 100%;
       align-items: unset;
+      margin-top: -6%;
     }
   `,
   image: css`
