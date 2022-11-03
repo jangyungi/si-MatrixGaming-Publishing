@@ -1,5 +1,4 @@
 import { MediaQueries } from "@/common/themes/Limit";
-import { TitleSection } from "@/domains/Home/common/components/TitleSection";
 import { css } from "@emotion/react";
 import { SwiperSection } from "./swiper";
 
