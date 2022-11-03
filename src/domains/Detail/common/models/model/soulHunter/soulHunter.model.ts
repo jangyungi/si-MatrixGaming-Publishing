@@ -1,4 +1,4 @@
-import { CardType } from "../card.type";
+import { CardType } from "../../type/card.type";
 import BgImage from "@/assets/detail/game/soulHunter/soul-bg.svg";
 import ItemImage1 from "@/assets/detail/game/soulHunter/soul-1.svg";
 import ItemImage2 from "@/assets/detail/game/soulHunter/soul-2.svg";
