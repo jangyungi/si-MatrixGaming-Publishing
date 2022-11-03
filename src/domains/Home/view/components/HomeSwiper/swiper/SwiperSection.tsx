@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import SwiperItem1 from "@/assets/home/swiper/swiper-item-1.svg";
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from "swiper";
 import Image from "next/image";
 import { useState } from "react";
@@ -13,17 +12,9 @@ import { MediaQueries } from "@/common/themes/Limit";
 import { Color } from "@/common/themes/Colors";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { SwiperModels } from "./models/swiper.model";
 
 export const SwiperSection = () => {
-  const SwiperItems = [
-    SwiperItem1,
-    SwiperItem1,
-    SwiperItem1,
-    SwiperItem1,
-    SwiperItem1,
-    SwiperItem1,
-  ];
-
   const [swiper, setSwiper] = useState<SwiperCore>();
   const slideNext = () => swiper?.slideNext();
   const slidePrev = () => swiper?.slidePrev();
@@ -34,7 +25,7 @@ export const SwiperSection = () => {
       <Swiper
         spaceBetween={isMedium ? 0 : 50}
         slidesPerView={isMedium ? 1 : 1.5}
-        initialSlide={1}
+        initialSlide={0}
         centeredSlides={true}
         pagination={{ clickable: true }}
         loop={true}
@@ -47,7 +38,7 @@ export const SwiperSection = () => {
         modules={[EffectCoverflow, Autoplay, Pagination]}
         onSwiper={(swiper) => setSwiper(swiper)}
       >
-        {SwiperItems.map((it, index) => (
+        {SwiperModels.map((it, index) => (
           <SwiperSlide key={index}>
             <div css={st.image}>
               <Image fill src={it} alt="slide" />
