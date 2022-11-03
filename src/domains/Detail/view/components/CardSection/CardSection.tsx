@@ -1,20 +1,28 @@
 import { css } from "@emotion/react";
-import { CardItems } from "@/domains/Detail/common/model/card.model";
 import { Typography } from "@mui/material";
 import Image from "next/image";
 import { MediaQueries } from "@/common/themes/Limit";
+import { ContentsType } from "@/domains/Detail/common/models/type/card.type";
 
-export const CardSection = () => {
-  const { contents } = CardItems;
+export type CardSectionProps = {
+  props: ContentsType;
+};
+
+export const CardSection = ({ props }: CardSectionProps) => {
   return (
     <div css={st.root}>
-      {contents.map((it, index) => (
+      {props.map((it, index) => (
         <div css={st.container} key={index}>
           <div css={st.wrapper}>
-            <Typography variant="subtitle2" color="secondary" lineHeight={1}>
+            <Typography
+              variant="subtitle1"
+              color="secondary"
+              fontWeight={700}
+              lineHeight={1.2}
+            >
               {it.title}
             </Typography>
-            <Typography variant="h2" fontWeight={40} color="primary">
+            <Typography variant="h2" fontWeight={400} color="primary">
               {it.desc}
             </Typography>
           </div>

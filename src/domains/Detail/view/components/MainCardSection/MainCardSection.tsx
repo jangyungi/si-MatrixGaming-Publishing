@@ -3,30 +3,32 @@ import Image from "next/image";
 import { Typography, TypographyProps } from "@mui/material";
 import { Color } from "@/common/themes/Colors";
 import { MediaQueries } from "@/common/themes/Limit";
-import { CardItems } from "@/domains/Detail/common/model/card.model";
 import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
+import { MainCardType } from "@/domains/Detail/common/models/type/card.type";
 
-export const MainCardSection = () => {
-  const { main } = CardItems;
+export type MainCardSectionProps = {
+  props: MainCardType;
+};
+export const MainCardSection = ({ props }: MainCardSectionProps) => {
   const { isMedium } = useCustomMediaQuery();
   return (
     <div css={st.root}>
       <div css={st.imageBox}>
         <div css={st.image}>
-          <Image fill src={main.src} alt="img" />
+          <Image fill src={props.src} alt="img" />
         </div>
         <div css={st.textBox}>
           <div css={st.row}>
             <Text>{"Developer"}</Text>
-            <Text>{main.info.developer}</Text>
+            <Text>{props.info.developer}</Text>
           </div>
           <div css={st.row}>
             <Text>{"Genre"}</Text>
-            <Text>{main.info.genre}</Text>
+            <Text>{props.info.genre}</Text>
           </div>
           <div css={st.row}>
             <Text>{"Status"}</Text>
-            <Text>{main.info.status}</Text>
+            <Text>{props.info.status}</Text>
           </div>
         </div>
       </div>
@@ -39,7 +41,7 @@ export const MainCardSection = () => {
           lineHeight={isMedium ? 1.4 : "40px"}
           sx={{ whiteSpace: "pre-wrap" }}
         >
-          {main.desc}
+          {props.desc}
         </Typography>
       </div>
     </div>

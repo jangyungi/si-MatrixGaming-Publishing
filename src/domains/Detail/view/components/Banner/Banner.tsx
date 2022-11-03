@@ -1,29 +1,34 @@
 import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import Image from "next/image";
-import BannerImg from "@/assets/detail/banner/img-banner.svg";
 import { MediaQueries } from "@/common/themes/Limit";
+import { BannerType } from "@/domains/Detail/common/models/type/card.type";
+import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
 
-export const Banner = () => {
-  const BannerItem = {
-    src: BannerImg,
-    caption: "Onboarded Games",
-    title: '"Become a King and save the kingdom from an obscure conspiracy"',
-  };
+type BannerSectionProps = {
+  props: BannerType;
+};
 
+export const Banner = ({ props }: BannerSectionProps) => {
+  const { isMedium } = useCustomMediaQuery();
   return (
     <div css={st.root}>
       <div css={st.image}>
         <Image
           fill
-          src={BannerItem.src}
+          src={props.src}
           alt="img"
           style={{ objectFit: "cover", maxHeight: 600 }}
         />
         <div css={st.opacity}></div>
         <div css={st.textContainer}>
-          <Typography variant="caption" color="secondary" mb={0.4}>
-            {BannerItem.caption}
+          <Typography
+            variant="caption"
+            color="secondary"
+            lineHeight={1}
+            mb={isMedium ? "24px" : "40px"}
+          >
+            {"Onboarded Games"}
           </Typography>
           <Typography
             variant="h1"
@@ -33,7 +38,7 @@ export const Banner = () => {
             lineHeight={1.2}
             css={st.title}
           >
-            {BannerItem.title}
+            {props.title}
           </Typography>
         </div>
       </div>
