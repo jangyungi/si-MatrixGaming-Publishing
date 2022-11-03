@@ -40,6 +40,26 @@ a {
   height: 100%;
 }
 
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #eeee;
+  opacity: 1;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: black;
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination .swiper-pagination-bullet {
+    background-color: #eeee;
+    opacity: 1;
+  }
+
+  .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: black;
+  }
+}
+
 .swiper-slide-prev .swiper-image-background {
   position: absolute;
   width: 100%;
