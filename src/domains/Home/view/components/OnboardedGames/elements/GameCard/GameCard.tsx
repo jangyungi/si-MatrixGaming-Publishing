@@ -3,12 +3,15 @@ import Image from "next/image";
 import { CardType } from "@/domains/Home/view/components/OnboardedGames/models/card.type";
 import { Typography } from "@mui/material";
 import { Color } from "@/common/themes/Colors";
-import Link from "next/link";
 import { MediaQueries } from "@/common/themes/Limit";
+import Link from "next/link";
 
 export const GameCard = (props: CardType) => {
   return (
-    <Link href={"/"}>
+    <Link
+      href={{ pathname: "/detail", query: { game: props.name } }}
+      as={`/detail`}
+    >
       <div css={st.container}>
         <div css={st.image}>
           <Image fill src={props.src} alt="card-img" />
@@ -38,6 +41,9 @@ export const GameCard = (props: CardType) => {
 };
 
 const st = {
+  root: css`
+    cursor: pointer;
+  `,
   container: css`
     width: 100%;
 
