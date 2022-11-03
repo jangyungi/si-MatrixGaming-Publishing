@@ -1,12 +1,8 @@
+// *** ssakdduk setting
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-
-  images: {
-    loader: "akamai",
-    path: "./",
-  },
-  assetPrefix: "",
+  images: {},
   trailingSlash: true,
 };
 
