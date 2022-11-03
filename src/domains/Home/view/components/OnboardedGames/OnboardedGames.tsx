@@ -12,7 +12,13 @@ export const OnboardedGames = () => {
       <TitleSection title="Onboarded Games" onClick={() => alert("click")} />
       <div css={st.container}>
         {CardItems.map((it, index) => (
-          <GameCard key={index} src={it.src} title={it.title} desc={it.desc} />
+          <GameCard
+            key={index}
+            name={it.name}
+            src={it.src}
+            title={it.title}
+            desc={it.desc}
+          />
         ))}
       </div>
     </div>
