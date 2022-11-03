@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import { IconButton, Typography } from "@mui/material";
-import Logo from "@/assets/images/logo.svg";
+import Logo from "@/assets/header/logo.svg";
 import { Color } from "@/common/themes/Colors";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";

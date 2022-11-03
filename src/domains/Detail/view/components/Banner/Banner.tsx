@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 import { Typography } from "@mui/material";
 import Image from "next/image";
 import BannerImg from "@/assets/detail/banner/img-banner.svg";
+import { MediaQueries } from "@/common/themes/Limit";
 
 export const Banner = () => {
   const BannerItem = {
@@ -30,6 +31,7 @@ export const Banner = () => {
             fontSize={"40px"}
             fontWeight={700}
             lineHeight={1.2}
+            css={st.title}
           >
             {BannerItem.title}
           </Typography>
@@ -43,14 +45,28 @@ const st = {
   root: css`
     width: 100%;
     margin-top: 80px;
+
+    @media ${MediaQueries.md} {
+      margin-top: 100px;
+    }
+    @media ${MediaQueries.sm} {
+      margin-top: 76px;
+    }
+
+    @media ${MediaQueries.xs} {
+      margin-top: 68px;
+    }
   `,
   image: css`
     position: relative;
     width: 100%;
     height: 600px;
-
     display: flex;
     justify-content: center;
+
+    @media ${MediaQueries.sm} {
+      height: 400px;
+    }
   `,
 
   textContainer: css`
@@ -75,5 +91,18 @@ const st = {
     background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
     transform: rotate(180deg);
     z-index: 1;
+
+    @media ${MediaQueries.md} {
+      aspect-ratio: 1/0.72;
+    }
+  `,
+
+  title: css`
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
   `,
 };

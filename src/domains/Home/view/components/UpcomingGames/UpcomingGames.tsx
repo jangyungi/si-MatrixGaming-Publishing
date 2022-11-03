@@ -19,7 +19,17 @@ const st = {
     margin-bottom: 240px;
 
     @media ${MediaQueries.md} {
-      margin-top: 900px;
+      margin-top: 240px;
+    }
+
+    @media ${MediaQueries.sm} {
+      margin-top: 0px;
+      margin-bottom: 200px;
+    }
+
+    @media ${MediaQueries.sm} {
+      margin-top: 0px;
+      margin-bottom: 160px;
     }
   `,
 

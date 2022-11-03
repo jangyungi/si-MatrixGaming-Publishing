@@ -12,7 +12,12 @@ export type TitleSectionProps = {
 export const TitleSection = (props: TitleSectionProps) => {
   return (
     <div css={st.root}>
-      <Typography variant="subtitle1" fontWeight={700} color={Color.TextMain}>
+      <Typography
+        variant="subtitle1"
+        fontWeight={700}
+        lineHeight={1}
+        color={Color.TextMain}
+      >
         {props.title}
       </Typography>
       <Button
@@ -41,6 +46,10 @@ const st = {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+
+    @media ${MediaQueries.sm} {
+      margin-bottom: 32px;
+    }
   `,
 
   wrapper: css`

@@ -26,6 +26,14 @@ const st = {
     padding: ${isMedium ? "0 16px" : "0 24px"};
     margin: 0 auto;
     margin-bottom: 240px;
+
+    @media ${MediaQueries.sm} {
+      margin-bottom: 200px;
+    }
+
+    @media ${MediaQueries.sm} {
+      margin-bottom: 160px;
+    }
   `,
   container: css`
     width: 100%;
@@ -40,6 +48,17 @@ const st = {
 
     @media ${MediaQueries.md} {
       grid-template-columns: 1fr;
+      column-gap: 0px;
+      row-gap: 40px;
+    }
+    @media ${MediaQueries.sm} {
+      grid-template-columns: 1fr;
+      column-gap: 0px;
+      row-gap: 0px;
+    }
+
+    @media ${MediaQueries.xs} {
+      row-gap: 20px;
     }
   `,
 };

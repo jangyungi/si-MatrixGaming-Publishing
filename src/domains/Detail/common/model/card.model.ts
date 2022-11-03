@@ -1,8 +1,8 @@
 import { CardType } from "./card.type";
-import Toy1 from "@/assets/images/game/toy/toy-1.png";
-import Toy2 from "@/assets/images/game/toy/toy-2.png";
-import Toy3 from "@/assets/images/game/toy/toy-3.png";
-import Toy4 from "@/assets/images/game/toy/toy-4.png";
+import Toy1 from "@/assets/detail/game/toy/toy-1.svg";
+import Toy2 from "@/assets/detail/game/toy/toy-2.svg";
+import Toy3 from "@/assets/detail/game/toy/toy-3.svg";
+import Toy4 from "@/assets/detail/game/toy/toy-4.svg";
 
 export const CardItems: CardType = {
   main: {

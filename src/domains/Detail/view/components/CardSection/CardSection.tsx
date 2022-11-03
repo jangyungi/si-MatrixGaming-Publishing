@@ -39,6 +39,16 @@ const st = {
 
     @media ${MediaQueries.md} {
       padding: 0 20px 200px 20px;
+      gap: 160px;
+    }
+
+    @media ${MediaQueries.sm} {
+      padding: 0 20px 100px 20px;
+      gap: 120px;
+    }
+
+    @media ${MediaQueries.xs} {
+      gap: 100px;
     }
   `,
   container: css`
@@ -54,28 +64,34 @@ const st = {
     @media ${MediaQueries.md} {
       flex-direction: column;
       gap: 40px;
-      &:nth-child(even) {
+      &:nth-of-type(even) {
         flex-direction: column;
       }
     }
 
     @media ${MediaQueries.sm} {
-      gap: 20px;
+      gap: 16px;
+    }
+    @media ${MediaQueries.xs} {
+      gap: 12px;
     }
   `,
   wrapper: css`
     width: 51.6%;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 40px;
 
     @media ${MediaQueries.md} {
       width: 100%;
-      gap: 40px;
     }
 
     @media ${MediaQueries.sm} {
-      gap: 20px;
+      gap: 16px;
+    }
+
+    @media ${MediaQueries.xs} {
+      gap: 12px;
     }
   `,
   image: css`

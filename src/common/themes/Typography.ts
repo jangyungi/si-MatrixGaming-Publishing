@@ -16,7 +16,10 @@ const baseTypographyOptions: TypographyOptions = {
       fontSize: "64px",
     },
     [TypographyMediaQueries.sm]: {
-      fontSize: "60px",
+      fontSize: "48px",
+    },
+    [TypographyMediaQueries.xs]: {
+      fontSize: "44px",
     },
   },
   h2: {
@@ -114,7 +117,7 @@ const baseTypographyOptions: TypographyOptions = {
       fontSize: "32px",
     },
     [TypographyMediaQueries.sm]: {
-      fontSize: "22px",
+      fontSize: "18px",
     },
     [TypographyMediaQueries.xs]: {
       fontSize: "16px",

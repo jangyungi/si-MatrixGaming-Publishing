@@ -1,6 +1,5 @@
 import { css } from "@emotion/react";
 import Image from "next/image";
-import GameImage from "@/assets/images/game/toy/toy-1.png";
 import { Typography, TypographyProps } from "@mui/material";
 import { Color } from "@/common/themes/Colors";
 import { MediaQueries } from "@/common/themes/Limit";
@@ -14,7 +13,7 @@ export const MainCardSection = () => {
     <div css={st.root}>
       <div css={st.imageBox}>
         <div css={st.image}>
-          <Image fill src={GameImage} alt="img" />
+          <Image fill src={main.src} alt="img" />
         </div>
         <div css={st.textBox}>
           <div css={st.row}>
@@ -67,7 +66,18 @@ const st = {
       justify-content: unset;
       padding: 0 20px;
       margin-top: unset;
-      gap: 40px;
+      margin-bottom: 240px;
+      gap: 50px;
+    }
+
+    @media ${MediaQueries.sm} {
+      margin-bottom: 160px;
+      gap: 16px;
+    }
+
+    @media ${MediaQueries.xs} {
+      margin-bottom: 120px;
+      gap: 12px;
     }
   `,
 
@@ -84,6 +94,14 @@ const st = {
     width: 100%;
     aspect-ratio: 1/0.56;
     margin-bottom: 40px;
+
+    @media ${MediaQueries.sm} {
+      margin-bottom: 16px;
+    }
+
+    @media ${MediaQueries.xs} {
+      margin-bottom: 12px;
+    }
   `,
   textBox: css`
     width: 100%;
