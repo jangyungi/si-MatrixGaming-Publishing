@@ -755,6 +755,11 @@ acorn@^8.8.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.1.tgz#0a3f9cbecc4ec3bea6f0a80b66ae8dd2da250b73"
   integrity sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==
 
+ads@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/ads/-/ads-0.1.4.tgz#786b0ce0451fc8cac511d42d0320d4603d2d3c68"
+  integrity sha512-/upD1A5CywKJRyaD85NKSZ2cVv+1zg9KTUhbmXcaCBrCKCZwxVknrAwtblvIiiDJs2GX1n9WFRYNgM7gNlUeLw==
+
 ajv@^6.10.0, ajv@^6.12.4:
   version "6.12.6"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"

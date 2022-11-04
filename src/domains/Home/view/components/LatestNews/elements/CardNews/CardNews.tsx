@@ -4,12 +4,17 @@ import Image from "next/image";
 import { Typography } from "@mui/material";
 import { Color } from "@/common/themes/Colors";
 import Link from "next/link";
-import { MediaQueries } from "@/common/themes/Limit";
 
 export const CardNews = (props: CardNewsType) => {
   return (
     <Link href={"/"}>
-      <div css={st.root}>
+      <div
+        css={st.root}
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000"
+      >
         <div css={st.imgWrapper}>
           <Image fill src={props.src} alt="card" />
           <div css={st.opacity}></div>

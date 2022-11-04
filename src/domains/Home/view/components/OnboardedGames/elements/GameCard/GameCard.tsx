@@ -9,7 +9,13 @@ import Link from "next/link";
 export const GameCard = (props: CardType) => {
   return (
     <Link href={`/detail/${props.name}`}>
-      <div css={st.container}>
+      <div
+        css={st.container}
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+      >
         <div css={st.image}>
           <Image fill src={props.src} alt="card-img" />
         </div>

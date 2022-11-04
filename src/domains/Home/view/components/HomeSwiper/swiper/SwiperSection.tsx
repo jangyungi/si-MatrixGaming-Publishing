@@ -21,7 +21,7 @@ export const SwiperSection = () => {
 
   const { isMedium } = useCustomMediaQuery();
   return (
-    <div css={st.root}>
+    <div css={st.root} data-aos="zoom-out" data-aos-delay="300">
       <Swiper
         spaceBetween={isMedium ? 0 : 50}
         slidesPerView={isMedium ? 1 : 1.5}

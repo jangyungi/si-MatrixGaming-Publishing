@@ -4,7 +4,7 @@ import { SwiperSection } from "./swiper";
 
 export const UpcomingGames = () => {
   return (
-    <div css={st.root}>
+    <div css={st.root} data-aos="zoom-out" data-aos-delay="300">
       <SwiperSection />
     </div>
   );

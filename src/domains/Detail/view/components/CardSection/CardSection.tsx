@@ -19,14 +19,32 @@ export const CardSection = ({ props }: CardSectionProps) => {
               color="secondary"
               fontWeight={700}
               lineHeight={1.2}
+              data-aos="fade-up"
+              data-aos-delay="300"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
             >
               {it.title}
             </Typography>
-            <Typography variant="h2" fontWeight={400} color="primary">
+            <Typography
+              variant="h2"
+              fontWeight={400}
+              color="primary"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
               {it.desc}
             </Typography>
           </div>
-          <div css={st.image}>
+          <div
+            css={st.image}
+            data-aos="fade-up"
+            data-aos-delay="300"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             <Image fill src={it.src} alt="img" />
           </div>
         </div>

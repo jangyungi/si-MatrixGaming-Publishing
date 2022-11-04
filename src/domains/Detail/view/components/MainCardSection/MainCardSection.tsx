@@ -13,7 +13,13 @@ export const MainCardSection = ({ props }: MainCardSectionProps) => {
   const { isMedium } = useCustomMediaQuery();
   return (
     <div css={st.root}>
-      <div css={st.imageBox}>
+      <div
+        css={st.imageBox}
+        data-aos="fade-up"
+        data-aos-delay="300"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+      >
         <div css={st.image}>
           <Image fill src={props.src} alt="img" />
         </div>
@@ -32,7 +38,13 @@ export const MainCardSection = ({ props }: MainCardSectionProps) => {
           </div>
         </div>
       </div>
-      <div css={st.contentBox}>
+      <div
+        css={st.contentBox}
+        data-aos="fade-up"
+        data-aos-delay="500"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+      >
         <Typography
           variant="h2"
           color="secondary"
