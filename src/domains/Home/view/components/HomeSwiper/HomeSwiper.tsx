@@ -14,7 +14,7 @@ const st = {
   root: css`
     width: 100%;
     margin-top: 176px;
-    margin-bottom: 320px;
+    margin-bottom: 140px;
 
     @media ${MediaQueries.md} {
       margin-top: 100px;

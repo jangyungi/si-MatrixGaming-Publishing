@@ -8,7 +8,7 @@ import { CardNewsItems } from "./models/cardNews.model";
 export const LatestNews = () => {
   const { isMedium } = useCustomMediaQuery();
   return (
-    <div css={st.root(isMedium)}>
+    <div css={st.root(isMedium)} id="latest-news">
       <TitleSection title="Latest News" onClick={() => alert("click")} />
       <div css={st.container(isMedium)}>
         {CardNewsItems.map((it, index) => (

@@ -8,7 +8,7 @@ import { CardItems } from "./models/card.models";
 export const OnboardedGames = () => {
   const { isMedium } = useCustomMediaQuery();
   return (
-    <div css={st.root(isMedium)}>
+    <div css={st.root(isMedium)} id="onboarded-games">
       <TitleSection title="Onboarded Games" onClick={() => alert("click")} />
       <div css={st.container}>
         {CardItems.map((it, index) => (
@@ -29,11 +29,15 @@ const st = {
   root: (isMedium: boolean) => css`
     width: 100%;
     max-width: 1200px;
+
     padding: ${isMedium ? "0 16px" : "0 24px"};
     margin: 0 auto;
-    margin-bottom: 240px;
+    margin-bottom: 140px;
 
-    @media ${MediaQueries.sm} {
+    padding-top: 100px;
+
+    @media ${MediaQueries.md} {
+      padding-top: 0px;
       margin-bottom: 200px;
     }
 

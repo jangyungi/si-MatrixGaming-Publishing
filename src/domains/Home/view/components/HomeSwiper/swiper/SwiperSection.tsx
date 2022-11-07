@@ -29,6 +29,9 @@ export const SwiperSection = () => {
         centeredSlides={true}
         pagination={{ clickable: true }}
         loop={true}
+        autoplay={{
+          delay: 3000,
+        }}
         effect={"coverflow"}
         coverflowEffect={{
           rotate: 0,

@@ -27,7 +27,7 @@ export const SwiperSection = () => {
           onNextClick={slideNext}
         />
       </div>
-      <div css={st.container}>
+      <div css={st.container} data-aos="zoom-out" data-aos-delay="300">
         <Swiper
           spaceBetween={30}
           slidesPerView={isLarge ? 1.5 : 4}

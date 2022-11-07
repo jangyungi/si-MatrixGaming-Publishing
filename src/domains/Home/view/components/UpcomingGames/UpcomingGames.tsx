@@ -4,7 +4,7 @@ import { SwiperSection } from "./swiper";
 
 export const UpcomingGames = () => {
   return (
-    <div css={st.root} data-aos="zoom-out" data-aos-delay="300">
+    <div css={st.root} id="upcoming-games">
       <SwiperSection />
     </div>
   );
@@ -12,9 +12,11 @@ export const UpcomingGames = () => {
 
 const st = {
   root: css`
+    padding-top: 100px;
     margin-bottom: 240px;
 
     @media ${MediaQueries.md} {
+      padding-top: 0px;
       margin-top: 240px;
     }
 
