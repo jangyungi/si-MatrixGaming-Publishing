@@ -4,7 +4,7 @@ type MenuModel = {
 };
 
 export const menu: MenuModel[] = [
-  { label: "Home", href: "/" },
-  { label: "Detail", href: "/detail/toyNight" },
-  { label: "About", href: "/" },
+  { label: "ONBOARDED GAMES", href: "/#onboarded-games" },
+  { label: "UPCOMING GAMES", href: "/#upcoming-games" },
+  { label: "LATEST NEWS", href: "/#latest-news" },
 ];

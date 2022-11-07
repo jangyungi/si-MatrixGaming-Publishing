@@ -23,11 +23,11 @@ export const LaptopHeader = () => {
           <ul css={st.menu}>
             {menu.map(({ label, href }) => (
               <li key={label}>
-                <Link href={href}>
+                <a href={href}>
                   <Typography variant={"caption"} color={Color.TextMain}>
                     {label}
                   </Typography>
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

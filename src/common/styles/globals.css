@@ -16,6 +16,8 @@ body {
   font-family: Exo, sans-serif;
 
   background-color: #1d1d1f;
+
+  scroll-behavior: smooth;
 }
 
 a {
@@ -27,6 +29,7 @@ a {
   box-sizing: border-box;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
