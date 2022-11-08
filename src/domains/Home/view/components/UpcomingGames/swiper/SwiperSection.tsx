@@ -42,6 +42,7 @@ export const SwiperSection = () => {
               <div css={st.image}>
                 <Image fill src={it.src} alt="slide" css={st.imageContent} />
                 <div css={st.opacity}></div>
+                <div css={st.backgruondOpacity}></div>
                 <Typography
                   variant="subtitle2"
                   fontWeight={500}
@@ -84,9 +85,21 @@ const st = {
     height: 100%;
     top: 0;
     left: 0;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 8px;
+  `,
+
+  backgruondOpacity: css`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
     border-radius: 8px;
   `,
+
   text: css`
     width: 100%;
     height: 100%;
