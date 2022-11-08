@@ -40,7 +40,7 @@ export const SwiperSection = () => {
           {UpcomingSlideItems.map((it, index) => (
             <SwiperSlide key={index}>
               <div css={st.image}>
-                <Image fill src={it.src} alt="slide" css={st.image} />
+                <Image fill src={it.src} alt="slide" css={st.imageContent} />
                 <div css={st.opacity}></div>
                 <Typography
                   variant="subtitle2"
@@ -72,6 +72,9 @@ const st = {
     position: relative;
     width: 100% !important;
     aspect-ratio: 1/0.49;
+    border-radius: 8px;
+  `,
+  imageContent: css`
     border-radius: 8px;
   `,
 

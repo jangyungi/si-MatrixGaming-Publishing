@@ -47,7 +47,7 @@ export const SwiperSection = () => {
         {SwiperModels.map((it, index) => (
           <SwiperSlide key={index} onClick={() => router.push(it.href)}>
             <div css={st.image}>
-              <Image fill src={it.src} alt="slide" />
+              <Image fill src={it.src} alt="slide" css={st.imageContent} />
               <div className="swiper-image-background"></div>
             </div>
           </SwiperSlide>
@@ -79,6 +79,11 @@ const st = {
     position: relative;
     width: 100%;
     aspect-ratio: 1/0.416;
+    border-radius: 8px;
+  `,
+
+  imageContent: css`
+    border-radius: 8px;
   `,
 
   btnContainer: css`
