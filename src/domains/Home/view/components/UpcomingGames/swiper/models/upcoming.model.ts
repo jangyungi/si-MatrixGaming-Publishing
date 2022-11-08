@@ -8,6 +8,10 @@ import SwiperItem6 from "@/assets/home/upcoming/swiper-item-6.svg";
 
 export const UpcomingSlideItems: UpcomingSlideType[] = [
   {
+    src: SwiperItem4,
+    title: "Coming Soon",
+  },
+  {
     src: SwiperItem5,
     title: "Coming Soon",
   },
@@ -16,19 +20,15 @@ export const UpcomingSlideItems: UpcomingSlideType[] = [
     title: "Coming Soon",
   },
   {
-    src: SwiperItem4,
-    title: "Coming Soon",
-  },
-  {
-    src: SwiperItem1,
-    title: "Coming Soon",
-  },
-  {
     src: SwiperItem2,
     title: "Coming Soon",
   },
   {
     src: SwiperItem3,
+    title: "Coming Soon",
+  },
+  {
+    src: SwiperItem1,
     title: "Coming Soon",
   },
 ];

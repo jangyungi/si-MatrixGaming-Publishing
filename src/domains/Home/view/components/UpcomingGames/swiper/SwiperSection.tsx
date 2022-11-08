@@ -42,17 +42,15 @@ export const SwiperSection = () => {
             <SwiperSlide key={index}>
               <div css={st.image}>
                 <Image fill src={it.src} alt="slide" />
-                <div css={st.titleWrapper}>
-                  <Typography
-                    variant="subtitle2"
-                    fontWeight={500}
-                    color="secondary"
-                    sx={{ overflow: "hidden" }}
-                  >
-                    {it.title}
-                  </Typography>
-                </div>
-                <div className="swiper-image-opacity"></div>
+                <div css={st.opacity}></div>
+                <Typography
+                  variant="subtitle2"
+                  fontWeight={500}
+                  color="secondary"
+                  css={st.text}
+                >
+                  {it.title}
+                </Typography>
               </div>
             </SwiperSlide>
           ))}
@@ -70,6 +68,39 @@ const st = {
     width: 100%;
     position: relative;
   `,
+
+  image: css`
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/0.49;
+  `,
+
+  opacity: css`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #000000 5%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 8px;
+  `,
+  text: css`
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 99;
+
+    overflow: hidden;
+  `,
+
   title: css`
     width: 100%;
     display: flex;
@@ -79,24 +110,6 @@ const st = {
     @media ${MediaQueries.md} {
       padding: 0 20px;
     }
-  `,
-  image: css`
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1/0.49;
-  `,
-  titleWrapper: css`
-    width: 100%;
-    height: 100%;
-    padding: 8.6%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-    z-index: 99;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
   `,
   btnContainer: css`
     width: 74.5%;
