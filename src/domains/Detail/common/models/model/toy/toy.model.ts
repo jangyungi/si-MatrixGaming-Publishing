@@ -16,7 +16,7 @@ export const ToyItems: CardType = {
     info: {
       developer: "Matrix Gaming Inc.",
       genre: "Actions / Adventures",
-      status: "Alive",
+      status: "Under Development",
     },
   },
   contents: [
@@ -33,7 +33,7 @@ export const ToyItems: CardType = {
     {
       src: ItemImage4,
       title: "Explore forgotten ruins",
-      desc: `"You might awake angry ghouls in the process... Beware, they're usually quite grumpy before their morning coffee!"`,
+      desc: "You might awake angry ghouls in the process... Beware, they're usually quite grumpy before their morning coffee!",
     },
   ],
 };
