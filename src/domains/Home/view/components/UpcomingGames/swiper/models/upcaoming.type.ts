@@ -1,4 +1,4 @@
 export type UpcomingSlideType = {
-  src: string;
+  src: any;
   title: string;
 };

@@ -11,6 +11,7 @@ import { MediaQueries } from "@/common/themes/Limit";
 import { Color } from "@/common/themes/Colors";
 import { SwiperTitleSection } from "./swiperTitle";
 import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
+import styled from "@emotion/styled";
 
 export const SwiperSection = () => {
   const { isLarge } = useCustomMediaQuery();
@@ -34,14 +35,13 @@ export const SwiperSection = () => {
           initialSlide={1}
           centeredSlides={true}
           loop={true}
-          onSlideChange={(e) => console.log(e)}
           modules={[EffectCoverflow, Autoplay]}
           onSwiper={(swiper) => setSwiper(swiper)}
         >
           {UpcomingSlideItems.map((it, index) => (
             <SwiperSlide key={index}>
               <div css={st.image}>
-                <Image fill src={it.src} alt="slide" />
+                <Image fill src={it.src} alt="slide" css={st.image} />
                 <div css={st.opacity}></div>
                 <Typography
                   variant="subtitle2"
@@ -71,8 +71,9 @@ const st = {
 
   image: css`
     position: relative;
-    width: 100%;
+    width: 100% !important;
     aspect-ratio: 1/0.49;
+    border-radius: 8px;
   `,
 
   opacity: css`
@@ -81,7 +82,7 @@ const st = {
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(90deg, #000000 5%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
     border-radius: 8px;
   `,
   text: css`
