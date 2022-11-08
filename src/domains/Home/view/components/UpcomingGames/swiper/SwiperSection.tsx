@@ -11,10 +11,9 @@ import { MediaQueries } from "@/common/themes/Limit";
 import { Color } from "@/common/themes/Colors";
 import { SwiperTitleSection } from "./swiperTitle";
 import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
-import styled from "@emotion/styled";
 
 export const SwiperSection = () => {
-  const { isLarge } = useCustomMediaQuery();
+  const { isTablet, isLarge, isMedium } = useCustomMediaQuery();
   const [swiper, setSwiper] = useState<SwiperCore>();
   const slideNext = () => swiper?.slideNext();
   const slidePrev = () => swiper?.slidePrev();
@@ -30,7 +29,7 @@ export const SwiperSection = () => {
       </div>
       <div css={st.container} data-aos="zoom-out" data-aos-delay="300">
         <Swiper
-          spaceBetween={30}
+          spaceBetween={isTablet ? 30 : 45}
           slidesPerView={isLarge ? 1.5 : 4}
           initialSlide={1}
           centeredSlides={true}
@@ -100,6 +99,14 @@ const st = {
     z-index: 99;
 
     overflow: hidden;
+
+    @media ${MediaQueries.lg} {
+      font-size: 28px;
+    }
+
+    @media ${MediaQueries.sm} {
+      font-size: 20px;
+    }
   `,
 
   title: css`
