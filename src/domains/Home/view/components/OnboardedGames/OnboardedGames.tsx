@@ -14,7 +14,7 @@ export const OnboardedGames = () => {
         {CardItems.map((it, index) => (
           <GameCard
             key={index}
-            name={it.name}
+            href={it.href}
             src={it.src}
             title={it.title}
             desc={it.desc}

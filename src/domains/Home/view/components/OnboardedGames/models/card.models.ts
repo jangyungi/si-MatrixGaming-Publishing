@@ -8,39 +8,39 @@ import Avery from "@/assets/home/onboard/card6.svg";
 
 export const CardItems: CardType[] = [
   {
-    name: "toyKnight",
+    href: "/detail/dtoyKnight",
     src: ToyKnight,
     title: "Toy knight",
     desc: `"Become a King and save the kingdom from an obscure conspiracy"`,
   },
 
   {
-    name: "soulHunter",
+    href: "/detail/soulHunter",
     src: SoulHunter,
     title: "Soul Hunter",
     desc: `“ Dive into the underworld “ `,
   },
 
   {
-    name: "raphael",
+    href: "/detail/raphael",
     src: Rafael,
     title: "Rafael",
     desc: `"When playing God goes wrong..."`,
   },
   {
-    name: "bunker",
+    href: "/detail/bunker",
     src: Bunker,
     title: "Bunker-53",
     desc: `"The most dangerous island on the planet is waiting for your guts... Literally"`,
   },
   {
-    name: "projectR2",
+    href: "/#onboarded-games",
     src: ProjectR2,
     title: "Project R2",
     desc: `"When all hope is lost, only a hero can change destiny"`,
   },
   {
-    name: "avery",
+    href: "/#onboarded-games",
     src: Avery,
     title: "Avery",
     desc: `"The tale of a young mouse destined for heroics"`,

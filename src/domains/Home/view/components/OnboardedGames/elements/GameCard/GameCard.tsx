@@ -5,10 +5,13 @@ import { Typography } from "@mui/material";
 import { Color } from "@/common/themes/Colors";
 import { MediaQueries } from "@/common/themes/Limit";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export const GameCard = (props: CardType) => {
+  const router = useRouter();
+
   return (
-    <Link href={`/detail/${props.name}`}>
+    <div css={st.root} onClick={() => router.push(props.href)}>
       <div
         css={st.container}
         data-aos="fade-up"
@@ -39,7 +42,7 @@ export const GameCard = (props: CardType) => {
           </Typography>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 
