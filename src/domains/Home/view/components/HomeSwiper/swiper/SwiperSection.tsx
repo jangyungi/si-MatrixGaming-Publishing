@@ -13,8 +13,10 @@ import { Color } from "@/common/themes/Colors";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { SwiperModels } from "./models/swiper.model";
+import { useRouter } from "next/router";
 
 export const SwiperSection = () => {
+  const router = useRouter();
   const [swiper, setSwiper] = useState<SwiperCore>();
   const slideNext = () => swiper?.slideNext();
   const slidePrev = () => swiper?.slidePrev();
@@ -27,6 +29,7 @@ export const SwiperSection = () => {
         slidesPerView={isMedium ? 1 : 1.5}
         initialSlide={0}
         centeredSlides={true}
+        grabCursor
         pagination={{ clickable: true }}
         loop={true}
         autoplay={{
@@ -42,9 +45,9 @@ export const SwiperSection = () => {
         onSwiper={(swiper) => setSwiper(swiper)}
       >
         {SwiperModels.map((it, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} onClick={() => router.push(it.href)}>
             <div css={st.image}>
-              <Image fill src={it} alt="slide" />
+              <Image fill src={it.src} alt="slide" />
               <div className="swiper-image-background"></div>
             </div>
           </SwiperSlide>
