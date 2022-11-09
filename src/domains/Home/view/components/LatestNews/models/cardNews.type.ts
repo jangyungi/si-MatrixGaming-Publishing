@@ -1,4 +1,4 @@
 export type CardNewsType = {
-  src: string;
+  src: any;
   text: string;
 };

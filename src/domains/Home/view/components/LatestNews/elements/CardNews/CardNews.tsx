@@ -4,32 +4,55 @@ import Image from "next/image";
 import { Typography } from "@mui/material";
 import { Color } from "@/common/themes/Colors";
 import Link from "next/link";
+import { MediaQueries } from "@/common/themes/Limit";
 
 export const CardNews = (props: CardNewsType) => {
   return (
-    <Link href={"/"}>
-      <div
-        css={st.root}
-        data-aos="fade-up"
-        data-aos-delay="300"
-        data-aos-easing="ease-out-cubic"
-        data-aos-duration="2000"
-      >
-        <div css={st.imgWrapper}>
+    <div
+      css={st.root}
+      data-aos="fade-up"
+      data-aos-delay="300"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+    >
+      <Link href={"/"}>
+        <div className="card-news__wrapper" css={st.imgWrapper}>
           <Image fill src={props.src} alt="card" />
           <div css={st.opacity}></div>
           <Typography variant="body1" color={Color.TextMain} css={st.text}>
             {props.text}
           </Typography>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 
 const st = {
   root: css`
     width: 100%;
+
+    &:nth-child(1) {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 4;
+
+      .card-news__wrapper {
+        aspect-ratio: unset;
+        height: 100%;
+      }
+    }
+
+    @media ${MediaQueries.md} {
+      &:nth-child(1) {
+        grid-column: unset;
+        grid-row: unset;
+
+        .card-news__wrapper {
+          aspect-ratio: 1/0.345;
+          height: unset;
+        }
+      }
+    }
   `,
 
   imgWrapper: css`
@@ -50,6 +73,7 @@ const st = {
     background: linear-gradient(0deg, #000000 34.9%, rgba(0, 0, 0, 0) 100%);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+    z-index: 1;
   `,
 
   text: css`
@@ -62,5 +86,6 @@ const st = {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    z-index: 2;
   `,
 };

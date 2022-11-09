@@ -32,7 +32,11 @@ const st = {
     }
 
     @media ${MediaQueries.sm} {
-      padding-bottom: 200px;
+      padding-bottom: 140px;
+    }
+
+    @media ${MediaQueries.xs} {
+      padding-bottom: 80px;
     }
   `,
 
