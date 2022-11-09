@@ -34,5 +34,5 @@ export const useDetailView = () => {
 
   const result = getDatabyGaneName(gameName);
 
-  return { result };
+  return { result: result };
 };
