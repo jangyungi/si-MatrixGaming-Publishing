@@ -71,7 +71,7 @@ const st = {
     justify-content: space-between;
     align-items: center;
     margin-top: -50px;
-    margin-bottom: 200px;
+    margin-bottom: 80px;
     position: relative;
     z-index: 9;
 
@@ -81,17 +81,16 @@ const st = {
       justify-content: unset;
       padding: 0 20px;
       margin-top: unset;
-      margin-bottom: 240px;
       gap: 50px;
     }
 
     @media ${MediaQueries.sm} {
-      margin-bottom: 160px;
+      margin-bottom: 80px;
       gap: 16px;
     }
 
     @media ${MediaQueries.xs} {
-      margin-bottom: 120px;
+      margin-bottom: 40px;
       gap: 12px;
     }
   `,
