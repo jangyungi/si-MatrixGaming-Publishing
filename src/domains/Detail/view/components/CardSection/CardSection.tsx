@@ -59,22 +59,22 @@ const st = {
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    gap: 200px;
+    gap: 160px;
     margin: 0 auto;
     padding: 0 24px 200px 24px;
 
     @media ${MediaQueries.md} {
       padding: 0 20px 200px 20px;
-      gap: 160px;
+      gap: 120px;
     }
 
     @media ${MediaQueries.sm} {
       padding: 0 20px 100px 20px;
-      gap: 120px;
+      gap: 80px;
     }
 
     @media ${MediaQueries.xs} {
-      gap: 100px;
+      gap: 60px;
     }
   `,
   container: css`
