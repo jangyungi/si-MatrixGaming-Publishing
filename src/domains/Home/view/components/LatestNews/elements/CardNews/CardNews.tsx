@@ -32,18 +32,18 @@ const st = {
   root: css`
     width: 100%;
 
-    &:nth-child(1) {
+    &:nth-of-type(1) {
       grid-column: 1 / span 1;
       grid-row: 1 / span 4;
 
       .card-news__wrapper {
         aspect-ratio: unset;
-        height: 100%;
+        height: 97.4%;
       }
     }
 
     @media ${MediaQueries.md} {
-      &:nth-child(1) {
+      &:nth-of-type(1) {
         grid-column: unset;
         grid-row: unset;
 
