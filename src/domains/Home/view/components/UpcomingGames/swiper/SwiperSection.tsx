@@ -90,7 +90,6 @@ const st = {
   imageContent: css`
     border-radius: 8px;
   `,
-
   opacity: css`
     position: absolute;
     width: 100%;
@@ -102,7 +101,6 @@ const st = {
     border-radius: 8px;
     z-index: 9;
   `,
-
   backgruondOpacity: css`
     position: absolute;
     width: 100%;
@@ -112,27 +110,22 @@ const st = {
     background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
     border-radius: 8px;
   `,
-
   text: css`
     width: 100%;
     height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-
     z-index: 99;
-
     overflow: hidden;
 
     @media ${MediaQueries.lg} {
       font-size: 28px;
     }
-
     @media ${MediaQueries.sm} {
       font-size: 20px;
     }

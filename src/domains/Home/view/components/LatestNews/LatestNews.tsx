@@ -3,7 +3,8 @@ import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
 import { TitleSection } from "@/domains/Home/common/components/TitleSection";
 import { css } from "@emotion/react";
 import { CardNews } from "./elements/CardNews";
-import { CardNewsItems } from "./models/cardNews.model";
+import LargeCardImage from "@/assets/home/latest/large-card.png";
+import SmallCardImage from "@/assets/home/latest/small-card.png";
 
 export const LatestNews = () => {
   const { isMedium } = useCustomMediaQuery();
@@ -11,9 +12,10 @@ export const LatestNews = () => {
     <div css={st.root(isMedium)} id="latest-news">
       <TitleSection title="Latest News" />
       <div css={st.container(isMedium)}>
-        {CardNewsItems.map((it, index) => (
-          <CardNews key={index} src={it.src} text={it.text} />
-        ))}
+        <CardNews src={LargeCardImage} text={"To be updated..."} />
+        <CardNews src={SmallCardImage} text={"To be updated..."} />
+        <CardNews src={SmallCardImage} text={"To be updated..."} />
+        <CardNews src={SmallCardImage} text={"To be updated..."} />
       </div>
     </div>
   );
