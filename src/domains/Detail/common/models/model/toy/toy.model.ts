@@ -8,7 +8,7 @@ import ItemImage4 from "@/assets/detail/game/toy/toy-4.svg";
 export const ToyItems: CardType = {
   banner: {
     src: BgImage,
-    title: `"Become a King and save the kingdom from an obscure conspiracy"`,
+    title: `Become a King and save the kingdom from an obscure conspiracy`,
   },
   main: {
     src: ItemImage1,

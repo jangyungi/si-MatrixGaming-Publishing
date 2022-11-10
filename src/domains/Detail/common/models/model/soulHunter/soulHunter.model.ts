@@ -8,7 +8,7 @@ import ItemImage4 from "@/assets/detail/game/soulHunter/soul-4.svg";
 export const SoulHunterItems: CardType = {
   banner: {
     src: BgImage,
-    title: "“ Dive into the underworld “",
+    title: "Dive into the underworld",
   },
   main: {
     src: ItemImage1,

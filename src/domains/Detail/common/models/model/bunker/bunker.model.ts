@@ -7,7 +7,7 @@ import ItemImage2 from "@/assets/detail/game/bunker/bunker-3.svg";
 export const BunkerItems: CardType = {
   banner: {
     src: BgImage,
-    title: "“ Survive the most dangerous island on the planet “",
+    title: "Survive the most dangerous island on the planet",
   },
   main: {
     src: ItemImage1,

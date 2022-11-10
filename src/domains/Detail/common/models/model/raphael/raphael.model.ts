@@ -6,7 +6,7 @@ import ItemImage2 from "@/assets/detail/game/raphael/raphael-2.svg";
 export const RaphaelItems: CardType = {
   banner: {
     src: BgImage,
-    title: `"When playing God goes wrong..."`,
+    title: `When playing God goes wrong...`,
   },
   main: {
     src: ItemImage1,
