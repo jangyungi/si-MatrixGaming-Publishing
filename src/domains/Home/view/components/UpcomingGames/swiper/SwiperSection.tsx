@@ -86,7 +86,7 @@ const st = {
     top: 0;
     left: 0;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.7;
     border-radius: 8px;
   `,
 
