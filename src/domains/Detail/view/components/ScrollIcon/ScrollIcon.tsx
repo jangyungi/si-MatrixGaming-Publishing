@@ -49,7 +49,6 @@ const st = {
       bottom: 12px;
     }
   `,
-  image: css``,
 
   scrollDown: css`
     position: relative;

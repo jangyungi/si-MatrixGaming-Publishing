@@ -6,7 +6,6 @@ import { MediaQueries } from "@/common/themes/Limit";
 
 export type TitleSectionProps = {
   title: string;
-  onClick: () => void;
 };
 
 export const TitleSection = (props: TitleSectionProps) => {
@@ -21,7 +20,6 @@ export const TitleSection = (props: TitleSectionProps) => {
         {props.title}
       </Typography>
       <Button
-        onClick={props.onClick}
         variant="contained"
         sx={{ borderRadius: "100px" }}
         css={st.button}
