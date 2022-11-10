@@ -2,7 +2,7 @@ import { CardType } from "./card.type";
 import ToyKnight from "@/assets/home/onboard/card1.svg";
 import ProjectR2 from "@/assets/home/onboard/card2.svg";
 import SoulHunter from "@/assets/home/onboard/card3.svg";
-import Rafael from "@/assets/home/onboard/card4.svg";
+import Raphael from "@/assets/home/onboard/card4.svg";
 import Bunker from "@/assets/home/onboard/card5.svg";
 import Avery from "@/assets/home/onboard/card6.svg";
 
@@ -23,8 +23,8 @@ export const CardItems: CardType[] = [
 
   {
     href: "/detail/raphael",
-    src: Rafael,
-    title: "Rafael",
+    src: Raphael,
+    title: "Raphael",
     desc: `"When playing God goes wrong..."`,
   },
   {
