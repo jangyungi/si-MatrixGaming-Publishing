@@ -40,9 +40,11 @@ export const SwiperSection = () => {
           {UpcomingSlideItems.map((it, index) => (
             <SwiperSlide key={index}>
               <div css={st.image}>
-                <Image fill src={it.src} alt="slide" css={st.imageContent} />
-                <div css={st.opacity}></div>
-                <div css={st.backgruondOpacity}></div>
+                <div css={st.imageWrapper}>
+                  <Image fill src={it.src} alt="slide" css={st.imageContent} />
+                  <div css={st.opacity}></div>
+                  <div css={st.backgruondOpacity}></div>
+                </div>
                 <Typography
                   variant="subtitle2"
                   fontWeight={500}
@@ -69,6 +71,16 @@ const st = {
     position: relative;
   `,
 
+  imageWrapper: css`
+    width: 100%;
+    height: 100%;
+    position: relative;
+    aspect-ratio: 1/0.49;
+    border-radius: 8px;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+  `,
+
   image: css`
     position: relative;
     width: 100% !important;
@@ -88,6 +100,7 @@ const st = {
     background-color: black;
     opacity: 0.7;
     border-radius: 8px;
+    z-index: 9;
   `,
 
   backgruondOpacity: css`
