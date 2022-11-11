@@ -1,12 +1,16 @@
 import { css } from "@emotion/react";
-import { CardNewsType } from "../../models/cardNews.type";
 import Image from "next/image";
 import { Typography } from "@mui/material";
 import { Color } from "@/common/themes/Colors";
 import Link from "next/link";
 import { MediaQueries } from "@/common/themes/Limit";
 
-export const CardNews = (props: CardNewsType) => {
+type CardNewsType = {
+  src: any;
+  text: string;
+};
+
+export const CardNews = ({ src, text }: CardNewsType) => {
   return (
     <div
       css={st.root}
@@ -17,10 +21,10 @@ export const CardNews = (props: CardNewsType) => {
     >
       <Link href={"/"}>
         <div className="card-news__wrapper" css={st.imgWrapper}>
-          <Image fill src={props.src} alt="card" />
+          <Image fill src={src} alt="card" />
           <div css={st.opacity}></div>
           <Typography variant="body1" color={Color.TextMain} css={st.text}>
-            {props.text}
+            {text}
           </Typography>
         </div>
       </Link>
