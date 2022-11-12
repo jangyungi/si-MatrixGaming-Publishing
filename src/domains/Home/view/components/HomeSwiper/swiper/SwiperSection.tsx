@@ -44,14 +44,23 @@ export const SwiperSection = () => {
         modules={[EffectCoverflow, Autoplay, Pagination]}
         onSwiper={(swiper) => setSwiper(swiper)}
       >
-        {SwiperModels.map((it, index) => (
-          <SwiperSlide key={index} onClick={() => router.push(it.href)}>
-            <div css={st.image}>
-              <Image fill src={it.src} alt="slide" css={st.imageContent} />
-              <div className="swiper-image-background"></div>
-            </div>
-          </SwiperSlide>
-        ))}
+        {isMedium
+          ? SwiperModels.map((it, index) => (
+              <SwiperSlide key={index} onClick={() => router.push(it.href)}>
+                <div css={st.image}>
+                  <Image fill src={it.src} alt="slide" css={st.imageContent} />
+                  <div className="swiper-image-background"></div>
+                </div>
+              </SwiperSlide>
+            ))
+          : SwiperModels.map((it, index) => (
+              <SwiperSlide key={index} onClick={() => router.push(it.href)}>
+                <div css={st.image}>
+                  <Image fill src={it.src} alt="slide" css={st.imageContent} />
+                  <div className="swiper-image-background"></div>
+                </div>
+              </SwiperSlide>
+            ))}
       </Swiper>
       <div css={st.btnContainer}>
         <Button onClick={slidePrev} color="secondary" css={st.btnWrapper}>
