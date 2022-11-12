@@ -12,7 +12,7 @@ import { MediaQueries } from "@/common/themes/Limit";
 import { Color } from "@/common/themes/Colors";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { SwiperModels } from "./models/swiper.model";
+import { MobileSwiperModels, SwiperModels } from "./models/swiper.model";
 import { useRouter } from "next/router";
 
 export const SwiperSection = () => {
@@ -45,7 +45,7 @@ export const SwiperSection = () => {
         onSwiper={(swiper) => setSwiper(swiper)}
       >
         {isMedium
-          ? SwiperModels.map((it, index) => (
+          ? MobileSwiperModels.map((it, index) => (
               <SwiperSlide key={index} onClick={() => router.push(it.href)}>
                 <div css={st.image}>
                   <Image fill src={it.src} alt="slide" css={st.imageContent} />
