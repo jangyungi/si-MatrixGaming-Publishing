@@ -1,8 +1,8 @@
 import { CardType } from "../../type/card.type";
-import ItemImage3 from "@/assets/detail/game/bunker/bunker-bg.png";
-import BgImage from "@/assets/detail/game/bunker/bunker-1.png";
-import ItemImage1 from "@/assets/detail/game/bunker/bunker-2.png";
-import ItemImage2 from "@/assets/detail/game/bunker/bunker-3.png";
+import BgImage from "@/assets/detail/game/bunker/bunker-bg.png";
+import ItemImage1 from "@/assets/detail/game/bunker/bunker-1.png";
+import ItemImage2 from "@/assets/detail/game/bunker/bunker-2.png";
+import ItemImage3 from "@/assets/detail/game/bunker/bunker-3.png";
 
 export const BunkerItems: CardType = {
   banner: {
