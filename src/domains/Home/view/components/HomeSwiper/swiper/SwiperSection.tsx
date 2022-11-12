@@ -12,7 +12,7 @@ import { MediaQueries } from "@/common/themes/Limit";
 import { Color } from "@/common/themes/Colors";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { MobileSwiperModels, SwiperModels } from "./models/swiper.model";
+import { SwiperModels } from "./models/swiper.model";
 import { useRouter } from "next/router";
 
 export const SwiperSection = () => {
