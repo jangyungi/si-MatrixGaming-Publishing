@@ -63,7 +63,7 @@ const st = {
       height: 60px;
     }
     @media ${MediaQueries.xs} {
-      width: 120px;
+      width: 160px;
       aspect-ratio: 1/0.36;
     }
   `,
