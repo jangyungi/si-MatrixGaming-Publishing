@@ -8,7 +8,7 @@ import MobileSwiperItem1 from "@/assets/home/swiper/mobile/banner-toy.png";
 import MobileSwiperItem2 from "@/assets/home/swiper/mobile/banner-soulhunter.png";
 import MobileSwiperItem3 from "@/assets/home/swiper/mobile/banner-raphael.png";
 import MobileSwiperItem4 from "@/assets/home/swiper/mobile/banner-bunker.png";
-import MobileSwiperItem5 from "@/assets/home/swiper/mobile/banner-projectR2.jpg";
+import MobileSwiperItem5 from "@/assets/home/swiper/mobile/banner-projectR2.png";
 import MobileSwiperItem6 from "@/assets/home/swiper/mobile/banner-avery.png";
 
 export const SwiperModels = [
