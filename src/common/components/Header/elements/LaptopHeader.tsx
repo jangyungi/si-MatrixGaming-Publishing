@@ -3,7 +3,7 @@ import { Button, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { menu } from "../models/Menu.model";
-import Logo from "@/assets/header/logo.svg";
+import Logo from "@/assets/header/logo.png";
 import { Color } from "@/common/themes/Colors";
 
 export const LaptopHeader = () => {
