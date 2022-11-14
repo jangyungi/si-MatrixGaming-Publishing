@@ -4,13 +4,16 @@ import { css, keyframes } from "@emotion/react";
 import { useScrollIcon } from "./useScrollIcon";
 import { MediaQueries } from "@/common/themes/Limit";
 import { Typography } from "@mui/material";
+import { useRecoilValue } from "recoil";
+import { menuState } from "@/utils/recoil/menu.recoil";
 
 export const ScrollIcon = () => {
   const { isScrollEnded } = useScrollIcon();
+  const isMenuOpen = useRecoilValue(menuState);
 
   return (
     <div css={st.root}>
-      {!isScrollEnded ? (
+      {!isScrollEnded && !isMenuOpen ? (
         <div css={st.scrollDown}>
           <Typography
             variant="caption"

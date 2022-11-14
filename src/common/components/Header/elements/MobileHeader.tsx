@@ -5,8 +5,28 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import { MediaQueries } from "@/common/themes/Limit";
 import Link from "next/link";
+import { menu } from "../models/Menu.model";
+import { Color } from "@/common/themes/Colors";
+import { useState } from "react";
+import CloseIcon from "@mui/icons-material/Close";
+import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { menuState } from "@/utils/recoil/menu.recoil";
 
 export const MobileHeader = () => {
+  const setMenuState = useSetRecoilState(menuState);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { isSmall } = useCustomMediaQuery();
+
+  const onMenuOpen = () => {
+    setMenuOpen(true);
+    setMenuState(true);
+  };
+
+  const onMenuClose = () => {
+    setMenuOpen(false);
+    setMenuState(false);
+  };
   return (
     <div css={st.root}>
       <div css={st.inner}>
@@ -15,10 +35,28 @@ export const MobileHeader = () => {
             <Image fill src={Logo} alt={"logo"} />
           </div>
         </Link>
-        <IconButton>
+        <IconButton onClick={onMenuOpen}>
           <MenuIcon color="secondary" css={st.menuIcon} />
         </IconButton>
       </div>
+      <nav css={st.menuBackground(menuOpen)}>
+        <ul css={st.menuContainer(menuOpen)}>
+          <IconButton css={st.closeBtn} onClick={onMenuClose}>
+            <CloseIcon
+              sx={{ color: "white", fontSize: isSmall ? "32px" : "40px" }}
+            />
+          </IconButton>
+          {menu.map(({ label, href }) => (
+            <li key={label}>
+              <a href={href} onClick={onMenuClose}>
+                <Typography variant={"caption"} color={Color.TextMain}>
+                  {label}
+                </Typography>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 };
@@ -30,6 +68,14 @@ const st = {
     background-color: black;
     display: flex;
     justify-content: center;
+
+    @media ${MediaQueries.sm} {
+      height: 76px;
+    }
+
+    @media ${MediaQueries.xs} {
+      height: 68px;
+    }
   `,
   inner: css`
     width: 100%;
@@ -77,5 +123,33 @@ const st = {
     @media ${MediaQueries.xs} {
       font-size: 32px;
     }
+  `,
+
+  menuBackground: (isMenuOpen: boolean) => css`
+    position: absolute;
+    width: 100%;
+    height: ${isMenuOpen ? "100vh" : "0px"};
+    background-color: black;
+    overflow: hidden;
+    z-index: 999;
+    transition: 0.5s;
+  `,
+
+  menuContainer: (isMenuOpen: boolean) => css`
+    width: 100%;
+    height: 100%;
+
+    display: ${isMenuOpen ? "flex" : "none"};
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: -60px;
+  `,
+
+  closeBtn: css`
+    position: absolute;
+    top: 3%;
+    right: 3%;
   `,
 };

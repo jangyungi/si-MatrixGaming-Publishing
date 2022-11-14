@@ -5,6 +5,7 @@ import { ThemeProvider } from "@emotion/react";
 import { findTheme, ThemeTypes } from "@/common/themes/CustomThemes";
 import { useEffect } from "react";
 import Aos from "aos";
+import { RecoilRoot } from "recoil";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -12,9 +13,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <ThemeProvider theme={findTheme(ThemeTypes.Light)}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <RecoilRoot>
+      <ThemeProvider theme={findTheme(ThemeTypes.Light)}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </RecoilRoot>
   );
 }
 
