@@ -3,7 +3,7 @@ import { Button, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { menu } from "../models/Menu.model";
-import Logo from "@/assets/header/logo.svg";
+import Logo from "@/assets/header/logo.png";
 import { Color } from "@/common/themes/Colors";
 
 export const LaptopHeader = () => {
@@ -14,9 +14,6 @@ export const LaptopHeader = () => {
           <div css={st.image}>
             <Image fill src={Logo} alt={"logo"} />
           </div>
-          <Typography variant={"h2"} fontWeight={700} color={Color.TextMain}>
-            {"MATRIX GAMING"}
-          </Typography>
         </Link>
 
         <nav css={st.menuContainer}>
@@ -51,6 +48,7 @@ export const LaptopHeader = () => {
 const st = {
   root: css`
     width: 100%;
+    height: 80px;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -71,8 +69,8 @@ const st = {
   `,
   image: css`
     position: relative;
-    width: 40px;
-    height: 40px;
+    width: 200px;
+    height: 60px;
   `,
   menuContainer: css`
     display: flex;

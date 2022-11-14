@@ -1,9 +1,9 @@
 import { CardType } from "../../type/card.type";
-import BgImage from "@/assets/detail/game/soulHunter/soul-bg.svg";
-import ItemImage1 from "@/assets/detail/game/soulHunter/soul-1.svg";
-import ItemImage2 from "@/assets/detail/game/soulHunter/soul-2.svg";
-import ItemImage3 from "@/assets/detail/game/soulHunter/soul-3.svg";
-import ItemImage4 from "@/assets/detail/game/soulHunter/soul-4.svg";
+import BgImage from "@/assets/detail/game/soulHunter/soul-bg.png";
+import ItemImage1 from "@/assets/detail/game/soulHunter/soul-1.png";
+import ItemImage2 from "@/assets/detail/game/soulHunter/soul-2.png";
+import ItemImage3 from "@/assets/detail/game/soulHunter/soul-3.png";
+import ItemImage4 from "@/assets/detail/game/soulHunter/soul-4.png";
 
 export const SoulHunterItems: CardType = {
   banner: {

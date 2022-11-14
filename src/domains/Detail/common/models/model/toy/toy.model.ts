@@ -1,9 +1,9 @@
 import { CardType } from "../../type/card.type";
-import BgImage from "@/assets/detail/game/toy/toy-bg.svg";
-import ItemImage1 from "@/assets/detail/game/toy/toy-1.svg";
-import ItemImage2 from "@/assets/detail/game/toy/toy-2.svg";
-import ItemImage3 from "@/assets/detail/game/toy/toy-3.svg";
-import ItemImage4 from "@/assets/detail/game/toy/toy-4.svg";
+import BgImage from "@/assets/detail/game/toy/toy-bg.png";
+import ItemImage1 from "@/assets/detail/game/toy/toy-1.png";
+import ItemImage2 from "@/assets/detail/game/toy/toy-2.png";
+import ItemImage3 from "@/assets/detail/game/toy/toy-3.png";
+import ItemImage4 from "@/assets/detail/game/toy/toy-4.png";
 
 export const ToyItems: CardType = {
   banner: {

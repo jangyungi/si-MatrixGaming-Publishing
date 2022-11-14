@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 import { IconButton, Typography } from "@mui/material";
-import Logo from "@/assets/header/logo.svg";
-import { Color } from "@/common/themes/Colors";
+import Logo from "@/assets/header/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import { MediaQueries } from "@/common/themes/Limit";
@@ -15,9 +14,6 @@ export const MobileHeader = () => {
           <div css={st.image}>
             <Image fill src={Logo} alt={"logo"} />
           </div>
-          <Typography variant={"h2"} fontWeight={700} color={Color.TextMain}>
-            {"MATRIX GAMING"}
-          </Typography>
         </Link>
         <IconButton>
           <MenuIcon color="secondary" css={st.menuIcon} />
@@ -30,6 +26,7 @@ export const MobileHeader = () => {
 const st = {
   root: css`
     width: 100%;
+    height: 100px;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -58,16 +55,16 @@ const st = {
 
   image: css`
     position: relative;
-    width: 64px;
-    height: 64px;
+    width: 200px;
+    height: 60px;
 
     @media ${MediaQueries.sm} {
-      width: 40px;
-      height: 40px;
+      width: 200px;
+      height: 60px;
     }
     @media ${MediaQueries.xs} {
-      width: 32px;
-      height: 32px;
+      width: 160px;
+      aspect-ratio: 1/0.36;
     }
   `,
 

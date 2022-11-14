@@ -5,7 +5,7 @@ export type CardType = {
 };
 
 export type BannerType = {
-  src: string;
+  src: any;
   title: string;
 };
 

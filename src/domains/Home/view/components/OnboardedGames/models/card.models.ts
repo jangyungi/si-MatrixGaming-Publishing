@@ -1,10 +1,10 @@
 import { CardType } from "./card.type";
-import ToyKnight from "@/assets/home/onboard/card1.svg";
-import ProjectR2 from "@/assets/home/onboard/card2.svg";
-import SoulHunter from "@/assets/home/onboard/card3.svg";
-import Raphael from "@/assets/home/onboard/card4.svg";
-import Bunker from "@/assets/home/onboard/card5.svg";
-import Avery from "@/assets/home/onboard/card6.svg";
+import ToyKnight from "@/assets/home/swiper/mobile/banner-toy.png";
+import SoulHunter from "@/assets/home/swiper/mobile/banner-soulhunter.png";
+import Raphael from "@/assets/home/swiper/mobile/banner-raphael.png";
+import Bunker from "@/assets/home/swiper/mobile/banner-bunker.png";
+import ProjectR2 from "@/assets/home/swiper/mobile/banner-projectR2.png";
+import Avery from "@/assets/home/swiper/mobile/banner-avery.png";
 
 export const CardItems: CardType[] = [
   {
