@@ -6,9 +6,13 @@ import { MediaQueries } from "@/common/themes/Limit";
 
 export type TitleSectionProps = {
   title: string;
+  onMobileVisible?: boolean;
 };
 
-export const TitleSection = (props: TitleSectionProps) => {
+export const TitleSection = ({
+  title,
+  onMobileVisible = false,
+}: TitleSectionProps) => {
   return (
     <div css={st.root}>
       <Typography
@@ -17,12 +21,12 @@ export const TitleSection = (props: TitleSectionProps) => {
         lineHeight={1}
         color={Color.TextMain}
       >
-        {props.title}
+        {title}
       </Typography>
       <Button
         variant="contained"
         sx={{ borderRadius: "100px" }}
-        css={st.button}
+        css={st.button(onMobileVisible)}
       >
         <div css={st.wrapper}>
           <Typography variant="body2" fontWeight={500} color={Color.TextMain}>
@@ -52,12 +56,29 @@ const st = {
   wrapper: css`
     display: flex;
     align-items: center;
+    margin-right: -4px;
+
+    @media ${MediaQueries.md} {
+      margin-right: -8px;
+    }
   `,
 
-  button: css`
+  button: (onMobileVisible: boolean) => css`
     background-color: ${Color.Background};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     @media ${MediaQueries.md} {
-      display: none;
+      display: ${onMobileVisible ? "block" : "none"};
+      height: 36px;
+      padding: 0 20px;
+    }
+
+    @media ${MediaQueries.sm} {
+      display: ${onMobileVisible ? "block" : "none"};
+      height: 32px;
+      padding: 0 16px;
     }
   `,
 };

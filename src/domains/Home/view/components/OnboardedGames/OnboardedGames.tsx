@@ -9,7 +9,7 @@ export const OnboardedGames = () => {
   const { isMedium } = useCustomMediaQuery();
   return (
     <div css={st.root(isMedium)} id="onboarded-games">
-      <TitleSection title="Onboarded Games" />
+      <TitleSection title="Onboarded Games" onMobileVisible={true} />
       <div css={st.container}>
         {CardItems.map((it, index) => (
           <GameCard
