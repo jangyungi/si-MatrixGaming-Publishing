@@ -52,7 +52,7 @@ const st = {
         grid-row: unset;
 
         .card-news__wrapper {
-          aspect-ratio: 1/0.345;
+          aspect-ratio: 1/1.12;
           height: unset;
         }
       }
