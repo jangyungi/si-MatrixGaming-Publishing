@@ -5,9 +5,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import { MediaQueries } from "@/common/themes/Limit";
 import Link from "next/link";
-import { menu } from "../models/Menu.model";
+import { menu, mobileMenu } from "../models/Menu.model";
 import { Color } from "@/common/themes/Colors";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { useCustomMediaQuery } from "@/common/themes/UseCustomMediaQuery";
 import { useRecoilState, useSetRecoilState } from "recoil";
@@ -27,6 +27,7 @@ export const MobileHeader = () => {
     setMenuOpen(false);
     setMenuState(false);
   };
+
   return (
     <div css={st.root}>
       <div css={st.inner}>
@@ -46,7 +47,7 @@ export const MobileHeader = () => {
               sx={{ color: "white", fontSize: isSmall ? "32px" : "40px" }}
             />
           </IconButton>
-          {menu.map(({ label, href }) => (
+          {mobileMenu.map(({ label, href }) => (
             <li key={label}>
               <a href={href} onClick={onMenuClose}>
                 <Typography variant={"caption"} color={Color.TextMain}>
