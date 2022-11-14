@@ -80,6 +80,11 @@ const st = {
     width: 100%;
     aspect-ratio: 1/0.416;
     border-radius: 8px;
+
+    @media ${MediaQueries.md} {
+      aspect-ratio: 1/0.6;
+      border-radius: 0px;
+    }
   `,
 
   imageContent: css`
