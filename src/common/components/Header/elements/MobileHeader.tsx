@@ -5,7 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
 import { MediaQueries } from "@/common/themes/Limit";
 import Link from "next/link";
-import { menu, mobileMenu } from "../models/Menu.model";
+import { menu } from "../models/Menu.model";
 import { Color } from "@/common/themes/Colors";
 import { useEffect, useRef, useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
@@ -47,7 +47,7 @@ export const MobileHeader = () => {
               sx={{ color: "white", fontSize: isSmall ? "32px" : "40px" }}
             />
           </IconButton>
-          {mobileMenu.map(({ label, href }) => (
+          {menu.map(({ label, href }) => (
             <li key={label}>
               <a href={href} onClick={onMenuClose}>
                 <Typography variant={"caption"} color={Color.TextMain}>

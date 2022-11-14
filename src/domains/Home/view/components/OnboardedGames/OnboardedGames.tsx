@@ -37,12 +37,13 @@ const st = {
     padding-top: 100px;
 
     @media ${MediaQueries.md} {
-      padding-top: 0px;
+      padding-top: 112px;
       margin-bottom: 80px;
     }
 
     @media ${MediaQueries.sm} {
-      margin-bottom: 80px;
+      padding-top: 92px;
+      margin-bottom: 68px;
     }
   `,
   container: css`

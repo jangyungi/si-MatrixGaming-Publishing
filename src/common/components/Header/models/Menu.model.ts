@@ -12,12 +12,3 @@ export const menu: MenuModel[] = [
   { label: "UPCOMING GAMES", href: "/#upcoming-games" },
   { label: "LATEST NEWS", href: "/#latest-news" },
 ];
-
-export const mobileMenu: MenuModel[] = [
-  {
-    label: "ONBOARDED GAMES",
-    href: "/",
-  },
-  { label: "UPCOMING GAMES", href: "/#upcoming-games" },
-  { label: "LATEST NEWS", href: "/#latest-news" },
-];

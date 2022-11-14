@@ -18,11 +18,10 @@ const st = {
 
     @media ${MediaQueries.md} {
       margin-top: 100px;
-      margin-bottom: 40px;
+      margin-bottom: 0px;
     }
     @media ${MediaQueries.sm} {
       margin-top: 76px;
-      margin-bottom: 32px;
     }
 
     @media ${MediaQueries.xs} {

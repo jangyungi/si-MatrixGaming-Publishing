@@ -23,8 +23,8 @@ const st = {
 
     @media ${MediaQueries.sm} {
       margin-top: 100px;
-      padding-top: 80px;
-      margin-bottom: 120px;
+      padding-top: 92px;
+      margin-bottom: 108px;
     }
 
     @media ${MediaQueries.xs} {

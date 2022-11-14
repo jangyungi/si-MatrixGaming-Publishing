@@ -35,7 +35,7 @@ const st = {
     }
 
     @media ${MediaQueries.sm} {
-      padding-top: 80px;
+      padding-top: 92px;
       padding-bottom: 140px;
     }
 
