@@ -82,7 +82,7 @@ const st = {
     border-radius: 8px;
 
     @media ${MediaQueries.md} {
-      aspect-ratio: 1/0.6;
+      aspect-ratio: 1/0.523;
       border-radius: 0px;
     }
   `,
