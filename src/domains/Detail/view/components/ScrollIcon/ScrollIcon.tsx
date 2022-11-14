@@ -13,10 +13,11 @@ export const ScrollIcon = () => {
       {!isScrollEnded ? (
         <div css={st.scrollDown}>
           <Typography
-            fontSize="12px"
-            lineHeight={"14px"}
+            variant="caption"
+            lineHeight={1.1}
             color={"#FFFFFF"}
             textAlign="center"
+            css={st.text}
           >
             SCROLL
             <br />
@@ -52,8 +53,8 @@ const st = {
 
   scrollDown: css`
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background: #1d1d1f;
     border: 1px solid #eeeeee;
     border-radius: 80px;
@@ -65,17 +66,28 @@ const st = {
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 20px 14px 20px;
+    padding: 14px 20px 10px 20px;
 
-    @media ${MediaQueries.sm} {
-      width: 80px;
-      height: 80px;
+    @media ${MediaQueries.md} {
+      width: 72px;
+      height: 72px;
+
+      padding: 12px 20px 8px 20px;
     }
+  `,
+
+  text: css`
+    font-size: 10px !important;
   `,
   arrowImage: css`
     position: relative;
-    width: 25px;
-    height: 17px;
+    width: 24px;
+    height: 16px;
     animation: ${bounce} 2s ease infinite;
+
+    @media ${MediaQueries.md} {
+      width: 20px;
+      height: 12px;
+    }
   `,
 };
