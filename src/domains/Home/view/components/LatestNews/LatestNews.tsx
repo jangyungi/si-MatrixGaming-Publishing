@@ -30,14 +30,17 @@ const st = {
     padding-bottom: 200px;
 
     @media ${MediaQueries.md} {
+      padding-top: 120px;
       padding-bottom: 400px;
     }
 
     @media ${MediaQueries.sm} {
+      padding-top: 80px;
       padding-bottom: 140px;
     }
 
     @media ${MediaQueries.xs} {
+      padding-top: 80px;
       padding-bottom: 80px;
     }
   `,

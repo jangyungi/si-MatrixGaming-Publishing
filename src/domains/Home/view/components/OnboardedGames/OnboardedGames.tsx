@@ -38,11 +38,11 @@ const st = {
 
     @media ${MediaQueries.md} {
       padding-top: 0px;
-      margin-bottom: 200px;
+      margin-bottom: 80px;
     }
 
     @media ${MediaQueries.sm} {
-      margin-bottom: 160px;
+      margin-bottom: 80px;
     }
   `,
   container: css`

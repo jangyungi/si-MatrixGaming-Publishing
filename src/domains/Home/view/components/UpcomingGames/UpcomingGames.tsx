@@ -16,18 +16,19 @@ const st = {
     margin-bottom: 240px;
 
     @media ${MediaQueries.md} {
-      padding-top: 0px;
-      margin-top: 240px;
+      padding-top: 120px;
+      margin-top: 120px;
+      margin-bottom: 120px;
     }
 
     @media ${MediaQueries.sm} {
-      margin-top: 0px;
-      margin-bottom: 200px;
+      margin-top: 100px;
+      padding-top: 80px;
+      margin-bottom: 120px;
     }
 
-    @media ${MediaQueries.sm} {
-      margin-top: 0px;
-      margin-bottom: 160px;
+    @media ${MediaQueries.xs} {
+      margin-bottom: 80px;
     }
   `,
 };
