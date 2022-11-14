@@ -10,7 +10,7 @@ export const LatestNews = () => {
   const { isMedium } = useCustomMediaQuery();
   return (
     <div css={st.root(isMedium)} id="latest-news">
-      <TitleSection title="Latest News" />
+      <TitleSection title="Latest News" onMobileVisible={true} />
       <div css={st.container(isMedium)}>
         <CardNews src={LargeCardImage} text={"To be updated..."} />
         <CardNews src={SmallCardImage} text={"To be updated..."} />
