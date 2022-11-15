@@ -11,7 +11,7 @@ export const CardItems: CardType[] = [
     href: "/detail/dtoyKnight",
     src: ToyKnight,
     title: "Toy knight",
-    desc: `Become a King and save the kingdom from an obscure conspiracy`,
+    desc: `Save the kingdom from an obscure conspiracy`,
   },
 
   {

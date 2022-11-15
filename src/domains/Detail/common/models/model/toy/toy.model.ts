@@ -10,7 +10,7 @@ export const ToyItems: CardType = {
   banner: {
     src: BgImage,
     mobileSrc: MobileBgImage,
-    title: `Become a King and save the kingdom from an obscure conspiracy`,
+    title: `Save the kingdom from an obscure conspiracy`,
   },
   main: {
     src: ItemImage1,
