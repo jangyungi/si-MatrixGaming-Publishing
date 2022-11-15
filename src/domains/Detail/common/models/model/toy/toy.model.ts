@@ -1,5 +1,6 @@
 import { CardType } from "../../type/card.type";
 import BgImage from "@/assets/detail/game/toy/toy-bg.png";
+import MobileBgImage from "@/assets/detail/game/toy/toy-mb-bg.png";
 import ItemImage1 from "@/assets/detail/game/toy/toy-1.png";
 import ItemImage2 from "@/assets/detail/game/toy/toy-2.png";
 import ItemImage3 from "@/assets/detail/game/toy/toy-3.png";
@@ -8,6 +9,7 @@ import ItemImage4 from "@/assets/detail/game/toy/toy-4.png";
 export const ToyItems: CardType = {
   banner: {
     src: BgImage,
+    mobileSrc: MobileBgImage,
     title: `Become a King and save the kingdom from an obscure conspiracy`,
   },
   main: {

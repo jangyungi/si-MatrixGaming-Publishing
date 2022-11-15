@@ -1,11 +1,13 @@
 import { CardType } from "../../type/card.type";
 import BgImage from "@/assets/detail/game/raphael/raphael-bg.png";
+import MobileBgImage from "@/assets/detail/game/raphael/raphael-mb-bg.png";
 import ItemImage1 from "@/assets/detail/game/raphael/raphael-1.png";
 import ItemImage2 from "@/assets/detail/game/raphael/raphael-2.png";
 
 export const RaphaelItems: CardType = {
   banner: {
     src: BgImage,
+    mobileSrc: MobileBgImage,
     title: `When playing God goes wrong...`,
   },
   main: {

@@ -1,5 +1,6 @@
 import { CardType } from "../../type/card.type";
 import BgImage from "@/assets/detail/game/bunker/bunker-bg.png";
+import MobileBgImage from "@/assets/detail/game/bunker/bunker-mb-bg.png";
 import ItemImage1 from "@/assets/detail/game/bunker/bunker-1.png";
 import ItemImage2 from "@/assets/detail/game/bunker/bunker-2.png";
 import ItemImage3 from "@/assets/detail/game/bunker/bunker-3.png";
@@ -7,6 +8,7 @@ import ItemImage3 from "@/assets/detail/game/bunker/bunker-3.png";
 export const BunkerItems: CardType = {
   banner: {
     src: BgImage,
+    mobileSrc: MobileBgImage,
     title: "Survive the most dangerous island on the planet",
   },
   main: {

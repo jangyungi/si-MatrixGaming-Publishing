@@ -6,6 +6,7 @@ export type CardType = {
 
 export type BannerType = {
   src: any;
+  mobileSrc: any;
   title: string;
 };
 

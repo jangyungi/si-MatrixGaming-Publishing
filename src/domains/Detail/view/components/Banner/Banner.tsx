@@ -10,13 +10,13 @@ type BannerSectionProps = {
 };
 
 export const Banner = ({ props }: BannerSectionProps) => {
-  const { isMedium } = useCustomMediaQuery();
+  const { isSmall, isMedium } = useCustomMediaQuery();
   return (
     <div css={st.root}>
       <div css={st.image}>
         <Image
           fill
-          src={props.src}
+          src={isMedium ? props.mobileSrc : props.src}
           alt="img"
           style={{ objectFit: "cover", maxHeight: 600 }}
         />
@@ -26,14 +26,14 @@ export const Banner = ({ props }: BannerSectionProps) => {
             variant="caption"
             color="secondary"
             lineHeight={1}
-            mb={isMedium ? "24px" : "40px"}
+            css={st.caption}
+            mb={isSmall ? "18px" : "24px"}
           >
             {"Onboarded Games"}
           </Typography>
           <Typography
             variant="h1"
             color="secondary"
-            fontSize={"40px"}
             fontWeight={700}
             lineHeight={1.2}
             css={st.title}
@@ -71,6 +71,22 @@ const st = {
 
     @media ${MediaQueries.sm} {
       height: 400px;
+    }
+  `,
+
+  caption: css`
+    @media ${MediaQueries.lg} {
+      font-size: 14px;
+    }
+    @media ${MediaQueries.md} {
+      font-size: 20px;
+    }
+    @media ${MediaQueries.sm} {
+      font-size: 14px;
+    }
+
+    @media ${MediaQueries.xs} {
+      font-size: 12px;
     }
   `,
 

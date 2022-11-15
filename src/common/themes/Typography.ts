@@ -13,13 +13,13 @@ const baseTypographyOptions: TypographyOptions = {
       fontSize: "36px",
     },
     [TypographyMediaQueries.md]: {
-      fontSize: "64px",
-    },
-    [TypographyMediaQueries.sm]: {
       fontSize: "48px",
     },
+    [TypographyMediaQueries.sm]: {
+      fontSize: "32px",
+    },
     [TypographyMediaQueries.xs]: {
-      fontSize: "44px",
+      fontSize: "26px",
     },
   },
   h2: {
