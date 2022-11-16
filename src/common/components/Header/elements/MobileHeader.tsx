@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { IconButton, Typography } from "@mui/material";
+import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
 import Logo from "@/assets/header/logo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
@@ -29,36 +29,40 @@ export const MobileHeader = () => {
   };
 
   return (
-    <div css={st.root}>
-      <div css={st.inner}>
-        <Link href="/" css={st.logoWrapper}>
-          <div css={st.image}>
-            <Image fill src={Logo} alt={"logo"} />
+    <AppBar>
+      <Toolbar sx={{ backgroundColor: "black" }}>
+        <div css={st.root}>
+          <div css={st.inner}>
+            <Link href="/" css={st.logoWrapper}>
+              <div css={st.image}>
+                <Image fill src={Logo} alt={"logo"} />
+              </div>
+            </Link>
+            <IconButton onClick={onMenuOpen}>
+              <MenuIcon color="secondary" css={st.menuIcon} />
+            </IconButton>
           </div>
-        </Link>
-        <IconButton onClick={onMenuOpen}>
-          <MenuIcon color="secondary" css={st.menuIcon} />
-        </IconButton>
-      </div>
-      <nav css={st.menuBackground(menuOpen)}>
-        <ul css={st.menuContainer(menuOpen)}>
-          <IconButton css={st.closeBtn} onClick={onMenuClose}>
-            <CloseIcon
-              sx={{ color: "white", fontSize: isSmall ? "32px" : "40px" }}
-            />
-          </IconButton>
-          {menu.map(({ label, href }) => (
-            <li key={label}>
-              <a href={href} onClick={onMenuClose}>
-                <Typography variant={"caption"} color={Color.TextMain}>
-                  {label}
-                </Typography>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+          <nav css={st.menuBackground(menuOpen)}>
+            <ul css={st.menuContainer(menuOpen)}>
+              <IconButton css={st.closeBtn} onClick={onMenuClose}>
+                <CloseIcon
+                  sx={{ color: "white", fontSize: isSmall ? "32px" : "40px" }}
+                />
+              </IconButton>
+              {menu.map(({ label, href }) => (
+                <li key={label}>
+                  <a href={href} onClick={onMenuClose}>
+                    <Typography variant={"caption"} color={Color.TextMain}>
+                      {label}
+                    </Typography>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      </Toolbar>
+    </AppBar>
   );
 };
 

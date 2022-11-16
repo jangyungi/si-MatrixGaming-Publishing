@@ -27,7 +27,7 @@ export const SwiperSection = () => {
       <Swiper
         spaceBetween={isMedium ? 0 : 50}
         slidesPerView={isMedium ? 1 : 1.5}
-        initialSlide={0}
+        initialSlide={isMedium ? 1 : 0}
         centeredSlides={true}
         grabCursor
         pagination={{ clickable: true }}

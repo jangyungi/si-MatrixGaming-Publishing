@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { Button, Typography } from "@mui/material";
+import { AppBar, Button, Toolbar, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { menu } from "../models/Menu.model";
@@ -8,40 +8,44 @@ import { Color } from "@/common/themes/Colors";
 
 export const LaptopHeader = () => {
   return (
-    <div css={st.root}>
-      <div css={st.inner}>
-        <Link href="/" css={st.logoWrapper}>
-          <div css={st.image}>
-            <Image fill src={Logo} alt={"logo"} />
-          </div>
-        </Link>
+    <AppBar>
+      <Toolbar sx={{ backgroundColor: "black" }}>
+        <div css={st.root}>
+          <div css={st.inner}>
+            <Link href="/" css={st.logoWrapper}>
+              <div css={st.image}>
+                <Image fill src={Logo} alt={"logo"} />
+              </div>
+            </Link>
 
-        <nav css={st.menuContainer}>
-          <ul css={st.menu}>
-            {menu.map(({ label, href }) => (
-              <li key={label}>
-                <a href={href}>
-                  <Typography variant={"caption"} color={Color.TextMain}>
-                    {label}
-                  </Typography>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div css={st.loginWrapper}>
-          <Button css={st.button}>{"SIGN UP"}</Button>
-          <Button
-            css={st.button}
-            variant="contained"
-            color="secondary"
-            sx={{ borderRadius: "100px", padding: "10px 24px" }}
-          >
-            {"SIGN IN"}
-          </Button>
+            <nav css={st.menuContainer}>
+              <ul css={st.menu}>
+                {menu.map(({ label, href }) => (
+                  <li key={label}>
+                    <a href={href}>
+                      <Typography variant={"caption"} color={Color.TextMain}>
+                        {label}
+                      </Typography>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div css={st.loginWrapper}>
+              <Button css={st.button}>{"SIGN UP"}</Button>
+              <Button
+                css={st.button}
+                variant="contained"
+                color="secondary"
+                sx={{ borderRadius: "100px", padding: "10px 24px" }}
+              >
+                {"SIGN IN"}
+              </Button>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </Toolbar>
+    </AppBar>
   );
 };
 

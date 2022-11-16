@@ -6,6 +6,7 @@ import { findTheme, ThemeTypes } from "@/common/themes/CustomThemes";
 import { useEffect } from "react";
 import Aos from "aos";
 import { RecoilRoot } from "recoil";
+import { Layout } from "@/common/components/Layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
@@ -15,7 +16,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
       <ThemeProvider theme={findTheme(ThemeTypes.Light)}>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </RecoilRoot>
   );
