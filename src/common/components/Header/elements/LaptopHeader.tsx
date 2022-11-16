@@ -9,7 +9,7 @@ import { Color } from "@/common/themes/Colors";
 export const LaptopHeader = () => {
   return (
     <AppBar>
-      <Toolbar sx={{ backgroundColor: "black" }}>
+      <Toolbar sx={{ backgroundColor: "black", padding: "0px !important" }}>
         <div css={st.root}>
           <div css={st.inner}>
             <Link href="/" css={st.logoWrapper}>
