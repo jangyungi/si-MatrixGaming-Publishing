@@ -27,7 +27,7 @@ export const SwiperSection = () => {
       <Swiper
         spaceBetween={isMedium ? 0 : 50}
         slidesPerView={isMedium ? 1 : 1.5}
-        initialSlide={isMedium ? 1 : 0}
+        initialSlide={isMedium ? 0 : 6}
         centeredSlides={true}
         grabCursor
         pagination={{ clickable: true }}
@@ -82,7 +82,6 @@ const st = {
     border-radius: 8px;
 
     @media ${MediaQueries.md} {
-      aspect-ratio: 1/0.523;
       border-radius: 0px;
     }
   `,
