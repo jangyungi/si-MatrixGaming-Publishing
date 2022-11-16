@@ -14,7 +14,7 @@ export const RaphaelItems: CardType = {
     src: ItemImage1,
     desc: `Science becomes the most dangerous weapon when in the hands of a mad scientist. In a world filled with abominations and heresy, only a ruthless Priest like you can find redemption. This evil has to be stopped, even if it means breaking some commandments.`,
     info: {
-      developer: "Matrix Gaming Inc.",
+      developer: "Matrix Gaming LLC",
       genre: "Soullike",
       status: "Under Development",
     },

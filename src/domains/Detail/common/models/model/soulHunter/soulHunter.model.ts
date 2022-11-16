@@ -16,7 +16,7 @@ export const SoulHunterItems: CardType = {
     src: ItemImage1,
     desc: `Even the Underworld needs a hero, and you’re the ideal candidate for it. Armed with your reaper, fight against the rebels who have declared war on your father, the Underworld’s King. Mercy is for the weak, harvest their souls and make them regret their betrayal!`,
     info: {
-      developer: "Matrix Gaming Inc.",
+      developer: "Matrix Gaming LLC",
       genre: "Action RPG",
       status: "Under Development",
     },

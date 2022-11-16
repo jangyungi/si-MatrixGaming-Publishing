@@ -15,7 +15,7 @@ export const BunkerItems: CardType = {
     src: ItemImage1,
     desc: `Embark on an island where the only thing harder than surviving is to find something that won’t try to kill you. Make your way through the jungle with your squad and fight hordes of bizarre creatures that have evolved to become even deadlier. Perhaps could you use that to your advantage?`,
     info: {
-      developer: "Matrix Gaming Inc.",
+      developer: "Matrix Gaming LLC",
       genre: "Survival",
       status: "Under Development",
     },
