@@ -7,11 +7,13 @@ import { MediaQueries } from "@/common/themes/Limit";
 export type TitleSectionProps = {
   title: string;
   onMobileVisible?: boolean;
+  onVisible?: boolean;
 };
 
 export const TitleSection = ({
   title,
   onMobileVisible = false,
+  onVisible = true,
 }: TitleSectionProps) => {
   return (
     <div css={st.root}>
@@ -26,7 +28,7 @@ export const TitleSection = ({
       <Button
         variant="contained"
         sx={{ borderRadius: "100px" }}
-        css={st.button(onMobileVisible)}
+        css={st.button(onMobileVisible, onVisible)}
       >
         <div css={st.wrapper}>
           <Typography variant="body2" fontWeight={500} color={Color.TextMain}>
@@ -63,9 +65,9 @@ const st = {
     }
   `,
 
-  button: (onMobileVisible: boolean) => css`
+  button: (onMobileVisible: boolean, onVisible: boolean) => css`
     background-color: ${Color.Background};
-    display: flex;
+    display: ${onVisible ? "flex" : "none"};
     align-items: center;
     justify-content: center;
 
