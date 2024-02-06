@@ -6,9 +6,20 @@ type MenuModel = {
 
 export const menu: MenuModel[] = [
   {
+    label: "ABOUT US",
+    href: "/#about-us",
+  },
+
+  {
     label: "ONBOARDED GAMES",
     href: "/#onboarded-games",
   },
-  { label: "UPCOMING GAMES", href: "/#upcoming-games" },
-  { label: "LATEST NEWS", href: "/#latest-news" },
+  {
+    label: "UPCOMING GAMES",
+    href: "/#upcoming-games",
+  },
+  {
+    label: "CONTACT US",
+    href: "/#contact-us",
+  },
 ];
