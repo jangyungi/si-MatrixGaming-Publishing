@@ -13,7 +13,7 @@ export const UpcomingGames = () => {
 const st = {
   root: css`
     padding-top: 100px;
-    margin-bottom: 240px;
+    margin-bottom: 140px;
 
     @media ${MediaQueries.md} {
       padding-top: 120px;
