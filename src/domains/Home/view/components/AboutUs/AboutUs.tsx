@@ -43,6 +43,6 @@ const st = {
     width: 100%;
     color: #eeeeee;
     font-size: 1.3em;
-    line-height: 1.5em;
+    line-height: 2.6em;
   `,
 };
