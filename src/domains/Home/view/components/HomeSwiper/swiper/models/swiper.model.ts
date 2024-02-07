@@ -6,10 +6,10 @@ import SwiperItem6 from "@/assets/home/swiper/banner-avery.png";
 import SwiperItem7 from "@/assets/home/swiper/banner-nanospace.png";
 
 export const SwiperModels = [
+  { src: SwiperItem7, href: "" },
   { src: SwiperItem2, href: "/detail/soulHunter" },
   { src: SwiperItem3, href: "/detail/raphael" },
   { src: SwiperItem4, href: "/detail/bunker" },
   { src: SwiperItem5, href: "" },
   { src: SwiperItem6, href: "" },
-  { src: SwiperItem7, href: "" },
 ];
