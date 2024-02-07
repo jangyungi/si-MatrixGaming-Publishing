@@ -3,9 +3,10 @@ import { Header } from "@/common/components/Header";
 import Aos from "aos";
 import { useEffect } from "react";
 import { HomeSwiper } from "../components/HomeSwiper";
-import { LatestNews } from "../components/LatestNews";
+import { AboutUs } from "../components/AboutUs";
 import { OnboardedGames } from "../components/OnboardedGames";
 import { UpcomingGames } from "../components/UpcomingGames";
+import { ContactUs } from "../components/ContactUs";
 
 export const HomeView = () => {
   useEffect(() => {
@@ -19,9 +20,10 @@ export const HomeView = () => {
       <Header />
       <main>
         <HomeSwiper />
+        <AboutUs />
         <OnboardedGames />
         <UpcomingGames />
-        <LatestNews />
+        <ContactUs />
         <Footer />
       </main>
     </div>

@@ -31,17 +31,6 @@ export const LaptopHeader = () => {
                 ))}
               </ul>
             </nav>
-            <div css={st.loginWrapper}>
-              <Button css={st.button}>{"SIGN UP"}</Button>
-              <Button
-                css={st.button}
-                variant="contained"
-                color="secondary"
-                sx={{ borderRadius: "100px", padding: "10px 24px" }}
-              >
-                {"SIGN IN"}
-              </Button>
-            </div>
           </div>
         </div>
       </Toolbar>
@@ -52,7 +41,7 @@ export const LaptopHeader = () => {
 const st = {
   root: css`
     width: 100%;
-    height: 80px;
+    height: 100px;
     background-color: black;
     display: flex;
     justify-content: center;
@@ -87,16 +76,4 @@ const st = {
     gap: 60px;
   `,
   menuItem: css``,
-  loginWrapper: css`
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  `,
-  button: css`
-    font-weight: 500;
-    border-radius: 100px;
-    padding: 10px 24px;
-    margin: 0;
-    line-height: 1;
-  `,
 };

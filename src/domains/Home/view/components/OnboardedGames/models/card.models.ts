@@ -1,5 +1,5 @@
 import { CardType } from "./card.type";
-import ToyKnight from "@/assets/home/swiper/mobile/banner-toy.png";
+import NanoSpace from "@/assets/home/swiper/mobile/banner-nanospace.png";
 import SoulHunter from "@/assets/home/swiper/mobile/banner-soulhunter.png";
 import Raphael from "@/assets/home/swiper/mobile/banner-raphael.png";
 import Bunker from "@/assets/home/swiper/mobile/banner-bunker.png";
@@ -8,19 +8,17 @@ import Avery from "@/assets/home/swiper/mobile/banner-avery.png";
 
 export const CardItems: CardType[] = [
   {
-    href: "/detail/dtoyKnight",
-    src: ToyKnight,
-    title: "Toy knight",
-    desc: `Save the kingdom from an obscure conspiracy`,
+    href: "/#onboarded-games",
+    src: NanoSpace,
+    title: "NanoSpace",
+    desc: `Nanospace, leading Hi-tech company in a futuristic world where humans and robots co-exist, is under attack by human supremacist group led by SPADE...`,
   },
-
   {
     href: "/detail/soulHunter",
     src: SoulHunter,
     title: "Soul Hunter",
     desc: `Dive into the underworld`,
   },
-
   {
     href: "/detail/raphael",
     src: Raphael,
