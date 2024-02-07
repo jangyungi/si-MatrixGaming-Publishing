@@ -9,7 +9,7 @@ export const ContactUs = () => {
     <div css={st.root(isMedium)} id="contact-us">
       <TitleSection title="Contact Us" onVisible={false} />
       <div css={st.container}>
-        <a href="mailto:xxxxx@xxxx.xxx">xxxxx@xxxx.xxx</a>
+        <a href="mailto:galileoskyllc1@gmail.com">galileoskyllc1@gmail.com</a>
       </div>
     </div>
   );
