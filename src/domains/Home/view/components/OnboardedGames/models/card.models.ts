@@ -11,7 +11,7 @@ export const CardItems: CardType[] = [
     href: "/#onboarded-games",
     src: NanoSpace,
     title: "NanoSpace",
-    desc: `Description...`,
+    desc: `Nanospace, leading Hi-tech company in a futuristic world where humans and robots co-exist, is under attack by human supremacist group led by SPADE...`,
   },
   {
     href: "/detail/soulHunter",
