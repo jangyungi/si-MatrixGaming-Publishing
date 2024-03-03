@@ -11,11 +11,11 @@ export const ContactUs = () => {
       <div css={st.container}>
         <a href="mailto:contact@galileosky.net">contact22@galileosky.net</a>
       </div>
-      <div css={st.container}>
-        <a href="https://www.galileosky.net/policy.html" target="_blank">Privacy Policy</a>
+      <div>
+        <a href="https://www.galileosky.net/policy.html">Privacy Policy</a>
       </div>
-      <div css={st.container}>
-        <a href="https://www.galileosky.net/service.html" target="_blank">Terms of Service</a>
+      <div>
+        <a href="https://www.galileosky.net/service.html">Terms of Service</a>
       </div>
     </div>
   );
