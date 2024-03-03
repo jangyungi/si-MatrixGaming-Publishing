@@ -12,7 +12,7 @@ export const ContactUs = () => {
         <a href="mailto:contact@galileosky.net">contact33@galileosky.net</a>
       </div>
       <div>
-        <a href="https://www.galileosky.net/policy.html">Privacy Policy</a>
+        <a href="https://www.galileosky.net/detail/policy.html">Privacy Policy</a>
       </div>
       <div>
         <a href="https://www.galileosky.net/service.html">Terms of Service</a>
