@@ -9,10 +9,10 @@ export const ContactUs = () => {
     <div css={st.root(isMedium)} id="contact-us">
       <TitleSection title="Contact Us" onVisible={false} />
       <div css={st.container}>
-        <a href="mailto:contact@galileosky.net">contact22@galileosky.net</a>
+        <a href="mailto:contact@galileosky.net">contact33@galileosky.net</a>
       </div>
       <div>
-        <a href="./detail/policy/">Privacy Policy</a>
+        <a href="./detail/policy/policy.html">Privacy Policy</a>
       </div>
       <div>
         <a href="https://www.galileosky.net/service.html">Terms of Service</a>
