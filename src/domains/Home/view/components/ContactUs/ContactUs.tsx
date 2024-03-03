@@ -10,6 +10,7 @@ export const ContactUs = () => {
       <TitleSection title="Contact Us" onVisible={false} />
       <div css={st.container}>
         <a href="mailto:contact@galileosky.net">contact@galileosky.net</a>
+        <a href="https://www.galileosky.net/link.html" target="_blank">link1</a>
       </div>
     </div>
   );
