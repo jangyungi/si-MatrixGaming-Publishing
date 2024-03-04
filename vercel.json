@@ -2,11 +2,11 @@
   "version": 2,
   "routes": [
     {
-      "src": "/privacy",
-      "dest": "/public/privacy.html"
+      "src": "/public/privacy.html",
+      "dest": "/privacy"
     },{
-        "src": "/terms",
-        "dest": "/public/terms.html"
+        "src": "/public/terms.html",
+        "dest": "/terms"
       }
   ]
 }
