@@ -1,9 +1,12 @@
 {
-  "version": 2,
+  "version": 3,
   "routes": [
     {
-      "src": "/example.html",
-      "dest": "/public/example.html"
-    }
+      "src": "/privacy",
+      "dest": "/public/privacy.html"
+    },{
+        "src": "/terms",
+        "dest": "/public/terms.html"
+      }
   ]
 }
